@@ -212,7 +212,7 @@
             RadiusTopLeft: =15
             RadiusTopRight: =15
             Size: =20
-            Width: =407
+            Width: =383
             X: =44
             Y: =100
             ZIndex: =4
@@ -498,30 +498,31 @@
         ZIndex: =13
 
         btn_Filter As button:
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =1
+            BorderColor: =RGBA(240, 240, 240, 1)
+            BorderThickness: =3
             Color: =RGBA(128, 128, 128, 1)
+            DisabledColor: =RGBA(128, 128, 128, 1)
             DisabledFill: =RGBA(240, 240, 240, 1)
             Fill: =RGBA(240, 240, 240, 1)
             Font: =Font.Lato
             FontWeight: =FontWeight.Normal
             Height: =55
-            HoverFill: |-
-                =ColorFade(ColorValue("#CC2325"), -20%)
+            HoverBorderColor: =RGBA(128, 128, 128, 1)
+            HoverColor: =RGBA(116, 116, 116, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
             OnSelect: |-
                 =UpdateContext({_showFilter:true})
             PaddingRight: =25
-            PressedColor: =White
-            PressedFill: |-
-                =ColorFade(ColorValue("#CC2325"), -20%)
+            PressedColor: =RGBA(128, 128, 128, 1)
+            PressedFill: =
             RadiusBottomLeft: =15
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
             Size: =20
             Text: ="Filter"
-            Width: =152
-            X: =450
+            Width: =153
+            X: =438
             Y: =196
             ZIndex: =10
 
@@ -610,8 +611,10 @@
         Color: =RGBA(128, 128, 128, 1)
         Height: =20
         Icon: =If(_showFilter = true, Icon.ChevronUp, Icon.ChevronDown)
+        OnSelect: |-
+            =UpdateContext({_showFilter:!_showFilter})
         Width: =20
-        X: =559
+        X: =553
         Y: =215
         ZIndex: =16
 
