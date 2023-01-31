@@ -1154,19 +1154,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'View Account Screen'.Icon7.AccessibleLabel"
+                  "fullyQualifiedName": "'View Account Screen'.icn_add.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'View Account Screen'.Icon7.AccessibleLabel",
+                  "fullyQualifiedName": "'View Account Screen'.icn_add.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "View Account Screen",
-                "type": "'View Account Screen'.Icon7"
+                "type": "'View Account Screen'.icn_add"
               }
             }
           ],
@@ -1184,19 +1184,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'View Account Screen'.Icon7.TabIndex"
+                  "fullyQualifiedName": "'View Account Screen'.icn_add.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'View Account Screen'.Icon7.TabIndex",
+                  "fullyQualifiedName": "'View Account Screen'.icn_add.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "View Account Screen",
-                "type": "'View Account Screen'.Icon7"
+                "type": "'View Account Screen'.icn_add"
               }
             }
           ],
@@ -1227,6 +1227,36 @@
                 "member": "varHandleAddEdit",
                 "module": "App",
                 "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.AccContext"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.AccContext",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccContext",
+                "module": "Add Sales Caller Screen",
+                "type": "'Add Sales Caller Screen'"
               }
             }
           ],
