@@ -189,25 +189,6 @@
                 Y: =66
                 ZIndex: =6
 
-            btn_Hover As button:
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =144
-                HoverFill: =ColorFade(RGBA(56, 96, 178, 0), -20%)
-                OnSelect: |-
-                    =Select(Parent);
-                    Navigate('View Account Screen',Fade,{Account:gal_Accounts.Selected});
-                    
-                    //refresh the data of sales call
-                    Refresh('Sales Calls');
-                PressedFill: |-
-                    =//Self.Color
-                    Transparent
-                Size: =24
-                Text: =""
-                Width: =640
-                ZIndex: =7
-
             Icon1 As icon.NextArrow:
                 Height: =35
                 Icon: =Icon.NextArrow
@@ -220,6 +201,25 @@
                 Width: =35
                 X: =558
                 Y: =35
+                ZIndex: =7
+
+            btn_Hover As button:
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =130
+                HoverFill: =ColorFade(RGBA(56, 96, 178, 0.2), -20%)
+                OnSelect: |-
+                    =Select(Parent);
+                    Navigate('View Account Screen',Fade,{Account:gal_Accounts.Selected});
+                    
+                    //refresh the data of sales call
+                    Refresh('Sales Calls');
+                PressedFill: |-
+                    =//Self.Color
+                    Transparent
+                Size: =24
+                Text: =""
+                Width: =640
                 ZIndex: =8
 
         txt_SearchInput As text:
