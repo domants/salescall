@@ -92,11 +92,14 @@
             ZIndex: =2
 
             img_AccountImage As image:
-                Height: =111.75
                 Image: =Coalesce(ThisItem.'Default Image',default_image_Account)
                 OnSelect: =Select(Parent)
-                Width: =128
+                RadiusBottomLeft: =50
+                RadiusBottomRight: =50
+                RadiusTopLeft: =50
+                RadiusTopRight: =50
                 X: =5
+                Y: =13
                 ZIndex: =1
 
             lbl_AccName As label:
@@ -106,6 +109,7 @@
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
+                Size: =22
                 Text: =ThisItem.'Account Name'
                 VerticalAlign: =VerticalAlign.Top
                 Width: =Parent.TemplateWidth - img_AccountImage.Width - 104
@@ -124,7 +128,7 @@
                 VerticalAlign: =VerticalAlign.Top
                 Width: =lbl_AccName.Width
                 X: =lbl_AccName.X
-                Y: =lbl_AccName.Y + lbl_AccName.Height + 4
+                Y: =78
                 ZIndex: =3
 
             NextArrow1 As icon.ChevronRight:
@@ -138,6 +142,7 @@
                 PaddingTop: =10
                 TabIndex: =0
                 Tooltip: ="View item details"
+                Visible: =false
                 Width: =60
                 X: =Parent.TemplateWidth - Self.Width - 5
                 Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
@@ -151,13 +156,14 @@
                 ZIndex: =5
 
             lbl_AccType As label:
+                Color: =RGBA(184, 0, 0, 1)
                 Height: =Self.Size * 1.8
                 OnSelect: =Select(Parent)
                 Size: =16
                 Text: =ThisItem.'Account Type'
                 Width: =160
                 X: =450
-                Y: =lbl_AccName.Y + lbl_AccName.Height + 4
+                Y: =78
                 ZIndex: =6
 
             btn_Hover As button:
@@ -178,6 +184,15 @@
                 Text: =""
                 Width: =640
                 ZIndex: =7
+
+            Icon1 As icon.NextArrow:
+                Height: =35
+                Icon: =Icon.NextArrow
+                OnSelect: =Select(Parent)
+                Width: =35
+                X: =583
+                Y: =46
+                ZIndex: =8
 
         txt_SearchInput As text:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -214,6 +229,14 @@
             Width: =640
             Y: =142
             ZIndex: =5
+
+        icn_search As icon.Search:
+            Height: =32
+            Icon: =Icon.Search
+            Width: =36
+            X: =581
+            Y: =79
+            ZIndex: =9
 
     ctn_ShowFilter As groupContainer.manualLayoutContainer:
         Fill: =RGBA(219, 219, 219, 0.71)
@@ -466,17 +489,6 @@
             Y: =1014
             ZIndex: =9
 
-    icn_Filter_1 As icon.FilterFlatFilled:
-        Color: =RGBA(116, 116, 116, 1)
-        Height: =29
-        Icon: =Icon.Search
-        OnSelect: |-
-            =UpdateContext({_showFilter:true})
-        Width: =29
-        X: =56
-        Y: =210
-        ZIndex: =13
-
     grp_FilterButton As group:
         Height: =5
         Width: =5
@@ -572,6 +584,17 @@
             X: =525
             Y: =1
             ZIndex: =5
+
+    icn_Filter_1 As icon.FilterFlatFilled:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =29
+        Icon: =Icon.Search
+        OnSelect: |-
+            =UpdateContext({_showFilter:true})
+        Width: =29
+        X: =56
+        Y: =210
+        ZIndex: =13
 
     Label4 As label:
         Font: =Font.'Lato Black'

@@ -431,6 +431,22 @@
                 Y: =50
                 ZIndex: =10
 
+            btn_overlay As button:
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =75
+                HoverFill: =ColorFade(RGBA(56, 96, 178, 0), -20%)
+                OnSelect: |-
+                    =Select( Parent );Navigate('Add Sales Caller Screen',Fade,{handleEditAdd:"Edit",AccContext:ThisItem});
+                    Set(varSetEdit, "Edit");
+                PressedFill: |-
+                    =//Self.Color
+                    Transparent
+                Size: =24
+                Text: =""
+                Width: =630
+                Y: =10
+                ZIndex: =11
+
         noRecordFoundTimeline As label:
             Align: =Align.Center
             BorderColor: =RGBA(89, 0, 0, 1)
@@ -592,16 +608,6 @@
         Y: =64
         ZIndex: =12
 
-    icn_back_1 As icon.BackArrow:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =45
-        Icon: =Icon.BackArrow
-        OnSelect: =Back(Fade)
-        Width: =45
-        X: =22
-        Y: =24
-        ZIndex: =13
-
     Button1 As button:
         BorderColor: =RGBA(168, 0, 0, 1)
         BorderThickness: =5
@@ -612,13 +618,23 @@
         HoverFill: =RGBA(255, 255, 255, 1)
         OnSelect: |-
             =Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name'});
-            
+            Set(varHandleAddEdit,"Add");
             NewForm(SalesCallForm);
         Text: ="Save"
         Visible: =false
         Width: =168
         X: =236
-        Y: =1030
+        Y: =1081
+        ZIndex: =13
+
+    icn_back_1 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =45
+        Icon: =Icon.BackArrow
+        OnSelect: =Back(Fade)
+        Width: =45
+        X: =22
+        Y: =24
         ZIndex: =13
 
     grp_BottomNav_2 As group:
@@ -729,13 +745,13 @@
             Y: =1024
             ZIndex: =9
 
-        Icon7 As icon.Add:
+        icn_add As icon.Add:
             Color: =RGBA(230, 230, 230, 1)
             Height: =50
             Icon: =Icon.Add
             OnSelect: |-
-                =Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name'});
-                
+                =Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name',handleEditAdd:"Add"});
+                Set(varSetEdit, "Add");
                 NewForm(SalesCallForm);
             Width: =50
             X: =295
