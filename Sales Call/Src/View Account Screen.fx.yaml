@@ -425,7 +425,7 @@
                 Height: =108
                 HoverFill: =ColorFade(RGBA(56, 96, 178, 0), -20%)
                 OnSelect: |-
-                    =Select( Parent );Navigate('Add Sales Caller Screen',Fade,{handleEditAdd:"Edit",AccContext:ThisItem});
+                    =Select( Parent );Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name',AccContext:ThisItem});
                     Set(varSetEdit, "edit");
                     EditForm(SalesCallForm);
                 PressedFill: |-
@@ -566,7 +566,7 @@
         Icon: =Icon.Add
         OnSelect: |-
             =NewForm(SalesCallForm);
-            Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name',handleEditAdd:"Add"});
+            Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name'});
             Set(varSetEdit, "add");
         PressedColor: =White
         Width: =52
