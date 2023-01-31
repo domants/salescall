@@ -653,6 +653,16 @@
         Y: =1081
         ZIndex: =13
 
+    Label3 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: =Account.'Account (accountid)'
+        Width: =560
+        X: =22
+        Y: =775
+        ZIndex: =14
+
     grp_BottomNav_2 As group:
         Height: =5
         Width: =5
