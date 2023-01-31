@@ -435,7 +435,9 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =75
                 HoverFill: =ColorFade(RGBA(56, 96, 178, 0), -20%)
-                OnSelect: =Select(Parent)
+                OnSelect: |-
+                    =Select(Parent);
+                    UpdateContext({_handleAddEdit:"Edit"})
                 PressedFill: |-
                     =//Self.Color
                     Transparent
@@ -625,7 +627,7 @@
         HoverColor: =RGBA(168, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         OnSelect: |-
-            =Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name'});
+            =Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name',_handleAddEdit:"Add"});
             
             NewForm(SalesCallForm);
         Text: ="Save"
