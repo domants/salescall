@@ -1,5 +1,5 @@
 "'Main Screen' As screen":
-    Fill: =RGBA(14, 13, 38, 1)
+    Fill: =RGBA(17, 28, 78, 1)
 
     ctn_main As groupContainer.manualLayoutContainer:
         Height: =1040
@@ -9,10 +9,11 @@
 
         background As button:
             BorderStyle: =BorderStyle.None
+            DisabledBorderColor: =RGBA(255, 255, 255, 1)
             DisabledColor: =RGBA(176, 26, 26, 1)
-            DisabledFill: =RGBA(246, 245, 245, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
             DisplayMode: =DisplayMode.Disabled
-            Height: =1013
+            Height: =1035
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =50
@@ -20,7 +21,7 @@
             Size: =24
             Text: =""
             Width: =Parent.Width
-            Y: =9
+            Y: =5
             ZIndex: =1
 
         "gal_Accounts As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
@@ -178,30 +179,27 @@
                 Width: =640
                 ZIndex: =7
 
-        lbl_AccountText As label:
-            Align: =Align.Center
-            AutoHeight: =true
-            DisabledColor: =RGBA(0, 0, 0, 1)
-            DisplayMode: =DisplayMode.Disabled
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Bold
-            Height: =66
-            Size: =20
-            Text: ="Accounts"
-            Width: =640
-            Y: =9
-            ZIndex: =3
-
         txt_SearchInput As text:
-            BorderThickness: =1
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            Color: =RGBA(116, 116, 116, 1)
             Default: =""
-            Font: =Font.'Segoe UI'
-            Height: =50
-            HintText: =""
-            Size: =16
-            Width: =508
-            X: =116
-            Y: =70
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Lighter
+            Height: =55
+            HintText: ="Find an Account..."
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            PaddingLeft: =60
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Size: =20
+            Width: =407
+            X: =44
+            Y: =100
             ZIndex: =4
 
         lbl_NoAccount As label:
@@ -216,18 +214,6 @@
             Width: =640
             Y: =142
             ZIndex: =5
-
-        Label6 As label:
-            AutoHeight: =true
-            Font: =Font.'Segoe UI'
-            Height: =45
-            Size: =21
-            Text: |-
-                ="Search:"
-            Width: =105
-            X: =10
-            Y: =75
-            ZIndex: =8
 
     ctn_ShowFilter As groupContainer.manualLayoutContainer:
         Fill: =RGBA(219, 219, 219, 0.71)
@@ -342,13 +328,14 @@
         ctn_BottomNav As groupContainer.manualLayoutContainer:
             Height: =80
             Width: =App.Width
-            Y: =App.Height - Self.Height
+            Y: =1056
             ZIndex: =7
 
             bkg As button:
                 BorderStyle: =BorderStyle.None
                 DisabledFill: =RGBA(14, 13, 38, 1)
                 DisplayMode: =DisplayMode.Disabled
+                Fill: =RGBA(17, 28, 78, 1)
                 Height: =80
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -437,8 +424,9 @@
                     BorderStyle: =BorderStyle.None
                     Color: |-
                         =//RGBA(255, 255, 255, 1)
-                        ColorValue("#0E0D26")
-                    Fill: =RGBA(0, 0, 0, 0)
+                        ColorValue("#111C4E")
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(17, 28, 78, 1)
                     Height: =Parent.TemplateHeight
                     HoverColor: =RGBA(0, 0, 0, 0)
                     HoverFill: |-
@@ -447,6 +435,7 @@
                     OnSelect: |-
                         =Select(Parent);
                         Set(navSelected,ThisItem.id);
+                    PressedBorderColor: =RGBA(168, 0, 0, 1)
                     PressedColor: =RGBA(179, 179, 179, 1)
                     PressedFill: |-
                         =//ColorFade(ColorValue("#0E0D26"), -20%)
@@ -454,7 +443,6 @@
                     RadiusTopRight: =30
                     Size: =24
                     Text: =""
-                    Visible: =false
                     Width: =Parent.TemplateWidth
                     ZIndex: =5
 
@@ -478,6 +466,17 @@
             Y: =1014
             ZIndex: =9
 
+    icn_Filter_1 As icon.FilterFlatFilled:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =29
+        Icon: =Icon.Search
+        OnSelect: |-
+            =UpdateContext({_showFilter:true})
+        Width: =29
+        X: =56
+        Y: =210
+        ZIndex: =13
+
     grp_FilterButton As group:
         Height: =5
         Width: =5
@@ -488,35 +487,41 @@
         btn_Filter As button:
             BorderStyle: =BorderStyle.None
             BorderThickness: =1
-            Fill: =RGBA(204, 35, 37, 1)
+            Color: =RGBA(128, 128, 128, 1)
+            DisabledFill: =RGBA(240, 240, 240, 1)
+            Fill: =RGBA(240, 240, 240, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Normal
+            Height: =55
             HoverFill: |-
                 =ColorFade(ColorValue("#CC2325"), -20%)
             OnSelect: |-
                 =UpdateContext({_showFilter:true})
-            PaddingLeft: =20
+            PaddingRight: =25
             PressedColor: =White
             PressedFill: |-
                 =ColorFade(ColorValue("#CC2325"), -20%)
-            RadiusBottomLeft: =6
-            RadiusBottomRight: =6
-            RadiusTopLeft: =6
-            RadiusTopRight: =6
-            Size: =17
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Size: =20
             Text: ="Filter"
-            Width: =170
-            X: =457
-            Y: =246
+            Width: =136
+            X: =467
+            Y: =196
             ZIndex: =10
 
         icn_Filter As icon.FilterFlatFilled:
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =23
+            Color: =RGBA(116, 116, 116, 1)
+            Height: =29
             Icon: =Icon.FilterFlatFilled
             OnSelect: |-
                 =UpdateContext({_showFilter:true})
-            Width: =34
-            X: =479
-            Y: =254
+            Visible: =false
+            Width: =29
+            X: =521
+            Y: =161
             ZIndex: =11
 
     grp_Header As group:
@@ -560,10 +565,21 @@
         lblGetTime As label:
             AutoHeight: =true
             Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Lato
             Height: =39
             Text: =varGetTime
             Width: =115
             X: =525
             Y: =1
             ZIndex: =5
+
+    Label4 As label:
+        Font: =Font.'Lato Black'
+        Height: =70
+        Size: =25
+        Text: ="Accounts"
+        Width: =542
+        X: =49
+        Y: =119
+        ZIndex: =14
 
