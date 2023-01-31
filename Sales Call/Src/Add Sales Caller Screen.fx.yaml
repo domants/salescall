@@ -467,6 +467,15 @@
             Width: =640
             ZIndex: =5
 
+        lbl_handleAddEdit As label:
+            Height: =78
+            Size: =21
+            Text: =Lower(varSetEdit)
+            Width: =191
+            X: =448
+            Y: =733
+            ZIndex: =8
+
         grp_AddSales_1 As group:
             Height: =5
             Width: =5
@@ -519,15 +528,6 @@
                 X: =516
                 Y: =1010
                 ZIndex: =7
-
-        lbl_handleAddEdit As label:
-            Height: =78
-            Size: =21
-            Text: =Lower(varSetEdit)
-            Width: =191
-            X: =448
-            Y: =733
-            ZIndex: =8
 
     Image2_1 As image:
         Height: =91
