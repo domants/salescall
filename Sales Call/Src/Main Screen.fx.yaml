@@ -2,9 +2,9 @@
     Fill: =RGBA(14, 13, 38, 1)
 
     ctn_main As groupContainer.manualLayoutContainer:
-        Height: =1022
+        Height: =1040
         Width: =640
-        Y: =114
+        Y: =96
         ZIndex: =2
 
         background As button:
@@ -12,7 +12,7 @@
             DisabledColor: =RGBA(176, 26, 26, 1)
             DisabledFill: =RGBA(246, 245, 245, 1)
             DisplayMode: =DisplayMode.Disabled
-            Height: =Parent.Height
+            Height: =1013
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =50
@@ -20,6 +20,7 @@
             Size: =24
             Text: =""
             Width: =Parent.Width
+            Y: =9
             ZIndex: =1
 
         "gal_Accounts As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
@@ -182,12 +183,13 @@
             AutoHeight: =true
             DisabledColor: =RGBA(0, 0, 0, 1)
             DisplayMode: =DisplayMode.Disabled
-            Font: =Font.'Segoe UI'
+            Font: =Font.Lato
             FontWeight: =FontWeight.Bold
             Height: =66
-            Size: =25
+            Size: =20
             Text: ="Accounts"
             Width: =640
+            Y: =9
             ZIndex: =3
 
         txt_SearchInput As text:
@@ -527,21 +529,22 @@
         Image2 As image:
             Height: =91
             Image: ='DON CRM DEMO'
-            Width: =272
-            Y: =1
+            Width: =175
+            X: =161
+            Y: =8
             ZIndex: =1
 
         Label2 As label:
             Align: =Align.Center
-            AutoHeight: =true
             Color: =RGBA(255, 255, 255, 1)
-            Font: =Font.'Segoe UI'
+            Font: =Font.Lato
             FontWeight: =FontWeight.Bold
-            Height: =60
-            Size: =30
+            Height: =55
+            PaddingLeft: =85
+            Size: =24
             Text: ="Sales Call App"
             Width: =640
-            Y: =26
+            Y: =23
             ZIndex: =3
 
         tmrGetCurrentTime As timer:
