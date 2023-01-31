@@ -271,7 +271,7 @@
                 Width: =35
                 X: =38
                 Y: =5
-                ZIndex: =3
+                ZIndex: =2
 
             lblSubject_1 As label:
                 AutoHeight: =true
@@ -292,7 +292,7 @@
                 Width: =466
                 X: =98
                 Y: =23
-                ZIndex: =4
+                ZIndex: =3
 
             imgActivity_1 As image:
                 BorderColor: =RGBA(0, 0, 0, 0)
@@ -319,7 +319,7 @@
                 Width: =15
                 X: =48
                 Y: =15
-                ZIndex: =5
+                ZIndex: =4
 
             lblCreatedOn_1 As label:
                 Align: =Align.Center
@@ -339,7 +339,7 @@
                 Width: =86
                 X: =98
                 Y: =5
-                ZIndex: =6
+                ZIndex: =5
 
             lblGetActivityLabel_1 As label:
                 BorderColor: =RGBA(89, 0, 0, 1)
@@ -380,7 +380,7 @@
                 Visible: =false
                 Width: =106
                 X: =174
-                ZIndex: =8
+                ZIndex: =6
 
             lblNotes As label:
                 Color: =RGBA(116, 116, 116, 1)
@@ -398,7 +398,7 @@
                 Width: =466
                 X: =98
                 Y: =48
-                ZIndex: =9
+                ZIndex: =7
 
             lblCustomer As label:
                 Color: =RGBA(116, 116, 116, 1)
@@ -416,7 +416,21 @@
                 Width: =394
                 X: =192
                 Y: =5
-                ZIndex: =10
+                ZIndex: =8
+
+            Icon1_1 As icon.NextArrow:
+                Height: =35
+                Icon: =Icon.NextArrow
+                OnSelect: |-
+                    =Select(Parent);
+                    Navigate('View Account Screen',Fade,{Account:gal_Accounts.Selected});
+                    
+                    //refresh the data of sales call
+                    Refresh('Sales Calls');
+                Width: =35
+                X: =529
+                Y: =29
+                ZIndex: =9
 
             btn_overlay As button:
                 Fill: |-
@@ -434,7 +448,7 @@
                 Size: =24
                 Text: =""
                 Width: =572
-                ZIndex: =11
+                ZIndex: =10
 
         noRecordFoundTimeline As label:
             Align: =Align.Center
