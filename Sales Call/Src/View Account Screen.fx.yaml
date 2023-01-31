@@ -559,7 +559,7 @@
         ZIndex: =8
 
     icn_add As icon.Add:
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(184, 0, 0, 1)
         DisabledColor: =RGBA(255, 255, 255, 1)
         HoverBorderColor: =
         HoverColor: =RGBA(255, 255, 255, 1)

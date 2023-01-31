@@ -343,7 +343,7 @@
                         =//Parent.Default
                         //drp_Customer.Selected.'Full Name'
                         
-                        If(varSetEdit = "edit",PlainText(AccContext.'Subject '),PlainText(Parent.Default))
+                        If(varSetEdit = "edit",PlainText(AccContext.Notes),PlainText(Parent.Default))
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
                     Fill: =RGBA(240, 240, 240, 1)
@@ -482,7 +482,7 @@
         Button2 As button:
             Height: =50
             Size: =24
-            Text: =If(varSetEdit = "edit","SAVE","UPDATE")
+            Text: =If(varSetEdit = "edit","UPDATE","SAVE")
             Width: =466
             X: =87
             Y: =926
