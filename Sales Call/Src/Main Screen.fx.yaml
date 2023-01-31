@@ -211,7 +211,12 @@
             Icon1 As icon.NextArrow:
                 Height: =35
                 Icon: =Icon.NextArrow
-                OnSelect: =Select(Parent)
+                OnSelect: |-
+                    =Select(Parent);
+                    Navigate('View Account Screen',Fade,{Account:gal_Accounts.Selected});
+                    
+                    //refresh the data of sales call
+                    Refresh('Sales Calls');
                 Width: =35
                 X: =558
                 Y: =35
