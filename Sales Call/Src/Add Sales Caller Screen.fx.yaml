@@ -482,7 +482,7 @@
         Button2 As button:
             Height: =50
             Size: =24
-            Text: =If(varSetEdit = "edit","SAVE","UPDATE")
+            Text: =If(varSetEdit = "edit","UPDATE","SAVE")
             Width: =466
             X: =87
             Y: =926

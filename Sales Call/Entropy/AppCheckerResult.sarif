@@ -74,19 +74,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Add Sales Caller Screen'.icn_back.AccessibleLabel"
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.SalesCallForm.'Subject _DataCard1'.DataCardValue3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Add Sales Caller Screen'.icn_back.AccessibleLabel",
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.SalesCallForm.'Subject _DataCard1'.DataCardValue3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Add Sales Caller Screen",
-                "type": "'Add Sales Caller Screen'.icn_back"
+                "type": "'Add Sales Caller Screen'.ctn_AddNewSales.SalesCallForm.'Subject _DataCard1'.DataCardValue3"
               }
             }
           ],
@@ -98,36 +98,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Add Sales Caller Screen'.icn_back.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Add Sales Caller Screen'.icn_back.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Add Sales Caller Screen",
-                "type": "'Add Sales Caller Screen'.icn_back"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
         },
         {
           "locations": [
@@ -147,36 +117,6 @@
                 "member": "AccessibleLabel",
                 "module": "Add Sales Caller Screen",
                 "type": "'Add Sales Caller Screen'.ctn_AddNewSales.SalesCallForm.Name_DataCard1.DataCardValue1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.SalesCallForm.'Subject _DataCard1'.DataCardValue3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.SalesCallForm.'Subject _DataCard1'.DataCardValue3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Add Sales Caller Screen",
-                "type": "'Add Sales Caller Screen'.ctn_AddNewSales.SalesCallForm.'Subject _DataCard1'.DataCardValue3"
               }
             }
           ],
@@ -338,6 +278,66 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.icn_back.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.icn_back.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Add Sales Caller Screen",
+                "type": "'Add Sales Caller Screen'.icn_back"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.icn_back.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.icn_back.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Add Sales Caller Screen",
+                "type": "'Add Sales Caller Screen'.icn_back"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1004,66 +1004,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'View Account Screen'.containerContent.icn_Add.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'View Account Screen'.containerContent.icn_Add.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "View Account Screen",
-                "type": "'View Account Screen'.containerContent.icn_Add"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'View Account Screen'.containerContent.icn_Add.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'View Account Screen'.containerContent.icn_Add.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "View Account Screen",
-                "type": "'View Account Screen'.containerContent.icn_Add"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'View Account Screen'.Image3.AccessibleLabel"
                 }
               ],
@@ -1184,36 +1124,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'View Account Screen'.txt_Notes.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'View Account Screen'.txt_Notes.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "View Account Screen",
-                "type": "'View Account Screen'.txt_Notes"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'View Account Screen'.icn_add.AccessibleLabel"
                 }
               ],
@@ -1268,6 +1178,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'View Account Screen'.txt_Notes.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'View Account Screen'.txt_Notes.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "View Account Screen",
+                "type": "'View Account Screen'.txt_Notes"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
