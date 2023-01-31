@@ -1,0 +1,198 @@
+"'Chart Screen' As screen":
+    Fill: =RGBA(14, 13, 38, 1)
+
+    background_2 As button:
+        BorderStyle: =BorderStyle.None
+        DisabledColor: =RGBA(176, 26, 26, 1)
+        DisabledFill: =RGBA(246, 245, 245, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: |-
+            =//Parent.Height
+            1022
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =24
+        Text: =""
+        Width: =Parent.Width
+        Y: =114
+        ZIndex: =1
+
+    Label5 As label:
+        Align: =Align.Center
+        DisplayMode: =DisplayMode.Disabled
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =1136
+        Italic: =true
+        Size: =21
+        Text: ="Power BI"
+        Width: =640
+        ZIndex: =2
+
+    grp_BottomNav_1 As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =5
+
+        ctn_BottomNav_1 As groupContainer.manualLayoutContainer:
+            Height: =80
+            Width: =App.Width
+            Y: =App.Height - Self.Height
+            ZIndex: =3
+
+            bkg_1 As button:
+                BorderStyle: =BorderStyle.None
+                DisabledFill: =RGBA(14, 13, 38, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Height: =80
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =30
+                RadiusTopRight: =30
+                Size: =24
+                Text: =""
+                Width: =640
+                ZIndex: =1
+
+            "gal_nav_1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+                Height: =Parent.Height
+                Items: |-
+                    =Table(
+                        {
+                            id: 1,
+                            title:"Home",
+                            icon: Home
+                        },
+                        {
+                            id: 2,
+                            title: "Chart",
+                            icon: Printing3D
+                        }
+                    )
+                OnSelect: |-
+                    =Set(navSelected,ThisItem.id);
+                    
+                    //Navigate to screen
+                    If(navSelected = 1,Navigate('Main Screen',Fade),Navigate('Chart Screen',Fade))
+                ShowScrollbar: =false
+                TemplatePadding: =0
+                TemplateSize: |-
+                    =//Min(440, Self.Height - 60)
+                    Parent.Width / 2
+                Width: =Parent.Width
+                ZIndex: =5
+
+                Image1_1 As image:
+                    Height: =46
+                    OnSelect: =Select(Parent)
+                    Visible: =false
+                    Width: =Parent.TemplateWidth - 32
+                    X: =(Parent.TemplateWidth / 2) - (Self.Width / 2)
+                    Y: =34
+                    ZIndex: =1
+
+                icn_nav_1 As icon.Home:
+                    Color: =RGBA(179, 179, 179, 1)
+                    Height: =60
+                    Icon: =ThisItem.icon
+                    OnSelect: =Select(Parent)
+                    Width: =60
+                    X: =130
+                    Y: =10
+                    ZIndex: =4
+
+                btn_nav_overlay_1 As button:
+                    BorderStyle: =BorderStyle.None
+                    Color: |-
+                        =//RGBA(255, 255, 255, 1)
+                        ColorValue("#0E0D26")
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =Parent.TemplateHeight
+                    HoverColor: =RGBA(0, 0, 0, 0)
+                    HoverFill: |-
+                        =//ColorFade(ColorValue("#0E0D26"), -20%)
+                        Color.Transparent
+                    OnSelect: |-
+                        =Select(Parent);
+                        Set(navSelected,ThisItem.id);
+                    PressedColor: =RGBA(179, 179, 179, 1)
+                    PressedFill: |-
+                        =//ColorFade(ColorValue("#0E0D26"), -20%)
+                    RadiusTopLeft: =30
+                    RadiusTopRight: =30
+                    Size: =24
+                    Text: =""
+                    Width: =Parent.TemplateWidth
+                    ZIndex: =5
+
+        Circle1_1 As circle:
+            Fill: =RGBA(168, 0, 0, 1)
+            Height: =70
+            Width: =70
+            X: =285
+            Y: =1024
+            ZIndex: =4
+
+        img_Don_1 As image:
+            Height: =90
+            Image: ='DON CRM DEMO'
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Width: =113
+            X: =296
+            Y: =1014
+            ZIndex: =5
+
+    grp_Header_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =10
+
+        Image2_2 As image:
+            Height: =91
+            Image: ='DON CRM DEMO'
+            Width: =272
+            Y: =1
+            ZIndex: =6
+
+        Label2_1 As label:
+            Align: =Align.Center
+            AutoHeight: =true
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =60
+            Size: =30
+            Text: ="Insights"
+            Width: =640
+            Y: =26
+            ZIndex: =7
+
+        tmrGetCurrentTime_2 As timer:
+            AutoStart: =true
+            Duration: =1000
+            OnTimerEnd: |-
+                =UpdateContext({varGetTime:Text(Now(),LongTime)})
+            Repeat: =true
+            Visible: =false
+            X: =353
+            ZIndex: =8
+
+        lblGetTime_2 As label:
+            AutoHeight: =true
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =39
+            Text: =varGetTime
+            Width: =115
+            X: =525
+            Y: =1
+            ZIndex: =9
+

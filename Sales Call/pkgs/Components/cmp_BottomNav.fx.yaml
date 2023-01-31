@@ -1,0 +1,84 @@
+cmp_BottomNav As CanvasComponent:
+    Color: =RGBA(0, 0, 0, 1)
+    CurrentIndicatorColor: =RGBA(0, 0, 0, 1)
+    Fill: =RGBA(51, 52 ,74, 1)
+    Height: =Max(App.Width, App.MinScreenWidth) / 10
+    HoverFill: =RGBA(0, 0, 0, 1)
+    NavItems: |-
+        =Table(
+            {
+                Value: "Item 1",
+                Icon: Icon.Waypoint,
+                Screen: App.ActiveScreen
+            },
+            {
+                Value: "Item 2",
+                Icon: Icon.Waypoint,
+                Screen: App.ActiveScreen
+            },
+            {
+                Value: "Item 3",
+                Icon: Icon.Waypoint,
+                Screen: App.ActiveScreen
+            },
+            {
+                Value: "Item 4",
+                Icon: Icon.Waypoint,
+                Screen: App.ActiveScreen
+            },
+            {
+                Value: "Item 5",
+                Icon: Icon.Waypoint,
+                Screen: App.ActiveScreen
+            },
+            {
+                Value: "Item 6",
+                Icon: Icon.Waypoint,
+                Screen: App.ActiveScreen
+            }
+        )
+    SelectedFill: =RGBA(0, 0, 0, 1)
+    Width: =Max(App.Width, App.MinScreenWidth)
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    "gal_Navigations As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        Height: =Parent.Height
+        Items: =cmp_BottomNav.NavItems
+        OnSelect: =Navigate(ThisItem.Screen)
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =Parent.Width / 2
+        Width: =Parent.Width
+        ZIndex: =1
+
+        img_Nav As image:
+            Height: =64
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth - 32
+            X: =(Parent.TemplateWidth / 2) - (Self.Width / 2)
+            ZIndex: =1
+
+        lbl_NavTitle As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Icon
+            VerticalAlign: =VerticalAlign.Top
+            Visible: =false
+            Width: =Parent.TemplateWidth - 64
+            X: =4
+            Y: =28
+            ZIndex: =2
+
+        icn_Nav As icon.Home:
+            Icon: =Icon.Home
+            OnSelect: =Select(Parent)
+            Width: =32
+            X: =144
+            ZIndex: =4
+

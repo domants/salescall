@@ -1,0 +1,102 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "a1a_salescallses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "a1a_salescalls",
+    "MaxGetRowsCount": 500,
+    "Name": "Sales Calls",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_a1a_customer_value": "Customer ",
+      "_ownerid_value": "Owner",
+      "a1a_calls": "Calls",
+      "a1a_date": "Date",
+      "a1a_name": "Name",
+      "a1a_notes": "Notes",
+      "a1a_salescalls_AsyncOperations": "System Jobs",
+      "a1a_salescalls_BulkDeleteFailures": "Bulk Delete Failures",
+      "a1a_salescalls_DuplicateBaseRecord": "Duplicate Records (a1a_salescalls_DuplicateBaseRecord)",
+      "a1a_salescalls_DuplicateMatchingRecord": "Duplicate Records (a1a_salescalls_DuplicateMatchingRecord)",
+      "a1a_salescalls_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "a1a_salescalls_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "a1a_salescalls_ProcessSession": "Process Sessions",
+      "a1a_salescalls_SyncErrors": "Sync Errors",
+      "a1a_salescallsid": "Sales Calls",
+      "a1a_subject": "Subject ",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Sales Calls",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Sales Calls (Views)",
+    "Name": "_a1a_salescalls_views",
+    "RelatedEntityName": "Sales Calls",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "5b63f49e-7be1-48f8-8927-6fff7eb4d564": "Active Sales Calls",
+      "9a144b24-d824-4d0c-bfbb-e3ce1f62a2e0": "Sales Calls Lookup View",
+      "cfc7ab19-2639-437b-8fac-1393b001f916": "Sales Calls Advanced Find View",
+      "de46804e-36d3-4737-9481-f664aa3139b9": "Inactive Sales Calls",
+      "e3cf8eff-213a-4fcf-bf67-a8f88ee4a099": "Sales Calls Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (Sales Calls)",
+    "Name": "a1a_salescalls_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Sales Calls"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Sales Calls",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Sales Calls)",
+    "Name": "a1a_salescalls_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Sales Calls"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Sales Calls",
+    "Type": "OptionSetInfo"
+  }
+]

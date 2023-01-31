@@ -1,0 +1,541 @@
+"'Add Sales Caller Screen' As screen":
+    Fill: =RGBA(14, 13, 38, 1)
+
+    icn_back As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =40
+        Icon: =Icon.BackArrow
+        OnSelect: =Back(Fade)
+        Width: =40
+        X: =584
+        Y: =12
+        ZIndex: =1
+
+    ctn_AddNewSales As groupContainer.manualLayoutContainer:
+        Height: =1084
+        Width: =640
+        Y: =52
+        ZIndex: =7
+
+        background_1 As button:
+            BorderStyle: =BorderStyle.None
+            DisabledColor: =RGBA(176, 26, 26, 1)
+            DisabledFill: =RGBA(246, 245, 245, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =1007
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Size: =24
+            Text: =""
+            Width: =640
+            Y: =77
+            ZIndex: =1
+
+        SalesCallForm As form:
+            DataSource: ='Sales Calls'
+            DefaultMode: =FormMode.New
+            Height: =789
+            Width: =Parent.Width
+            Y: =120
+            ZIndex: =4
+
+            "'Subject _DataCard1' As typedDataCard.textualEditCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="a1a_subject"
+                Default: =ThisItem.'Subject '
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@'Sales Calls'],DataSourceInfo.DisplayName,"a1a_subject")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =105
+                MaxLength: =DataSourceInfo([@'Sales Calls'], DataSourceInfo.MaxLength, "a1a_subject")
+                Required: =false
+                Update: =DataCardValue3.Text
+                Width: =640
+                X: =0
+                Y: =1
+                ZIndex: =1
+
+                DataCardKey3 As label:
+                    AutoHeight: =true
+                    Size: =19
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue3 As text:
+                    BorderColor: |-
+                        =//If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        ColorValue("#A80000")
+                    BorderThickness: =1
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =50
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =16
+                    Tooltip: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey3.Y + DataCardKey3.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage2 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =24
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue3.Y + DataCardValue3.Height
+                    ZIndex: =3
+
+                StarVisible2 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey3.Height
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey3.Y
+                    ZIndex: =4
+
+            Date_DataCard1 As typedDataCard.dateTimeEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="a1a_date"
+                Default: =ThisItem.Date
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@'Sales Calls'],DataSourceInfo.DisplayName,"a1a_date")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =133
+                Required: =false
+                Update: =DateValue1.SelectedDate + Time(Value(HourValue1.Selected.Value), Value(MinuteValue1.Selected.Value), 0)
+                Width: =640
+                X: =0
+                Y: =2
+                ZIndex: =1
+
+                DataCardKey4 As label:
+                    AutoHeight: =true
+                    Size: =19
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DateValue1 As datepicker:
+                    BorderColor: |-
+                        =//If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        ColorValue("#A80000")
+                    BorderThickness: =1
+                    DefaultDate: |-
+                        =//Parent.Default
+                        //Text(Today(),"[$-en-US]dd/mm/yyyy")
+                        Today()
+                    DisabledFill: |
+                        =//RGBA(244, 244, 244, 1)
+                    DisplayMode: |-
+                        =//Parent.DisplayMode
+                        Disabled
+                    EndYear: =Year(Today())+100
+                    Format: |-
+                        =//ShortDate
+                        " dd/mm/yyyy"
+                    Height: =50
+                    IconBackground: =//RGBA(56, 96, 178, 1)
+                    IconFill: |-
+                        =//RGBA(255, 255, 255, 1)
+                        ColorValue("#A80000")
+                    IsEditable: =true
+                    PaddingBottom: =0
+                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                    Size: =16
+                    StartYear: =1899
+                    Tooltip: =Parent.DisplayName
+                    Width: =580
+                    X: =30
+                    Y: =DataCardKey4.Y + DataCardKey4.Height + 5
+                    ZIndex: =2
+
+                HourValue1 As dropdown:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Text(Hour(Parent.Default),"00")
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =DateValue1.Height
+                    Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"]
+                    PaddingBottom: =5
+                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Visible: =false
+                    Width: =DateValue1.Width / 2 - 10
+                    X: =DateValue1.X + DateValue1.Width + 10
+                    Y: =DateValue1.Y
+                    ZIndex: =3
+
+                Separator2 As label:
+                    Align: =Align.Center
+                    FontWeight: =FontWeight.Bold
+                    Height: =HourValue1.Height
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =21
+                    Text: |-
+                        =":"
+                    Visible: =false
+                    Width: =10
+                    Wrap: =false
+                    X: =HourValue1.X + HourValue1.Width
+                    Y: =HourValue1.Y
+                    ZIndex: =4
+
+                MinuteValue1 As dropdown:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Text(Minute(Parent.Default),"00")
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =HourValue1.Height
+                    Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]
+                    PaddingBottom: =5
+                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Visible: =false
+                    Width: =HourValue1.Width
+                    X: =HourValue1.X + HourValue1.Width + Separator2.Width
+                    Y: =HourValue1.Y
+                    ZIndex: =5
+
+                ErrorMessage3 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =24
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =HourValue1.Y + HourValue1.Height
+                    ZIndex: =6
+
+                StarVisible3 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey4.Height
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey4.Y
+                    ZIndex: =7
+
+            "'Customer _DataCard3' As typedDataCard.blankPolymorphicEditCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="_a1a_customer_value"
+                Default: =ThisItem.'Customer '
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@'Sales Calls'],DataSourceInfo.DisplayName,"_a1a_customer_value")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =109
+                Required: =false
+                Update: =drp_Customer.Selected
+                Width: =640
+                X: =0
+                Y: =3
+                ZIndex: =1
+
+                drp_Customer As dropdown:
+                    BorderColor: |-
+                        =//RGBA(0, 18, 107, 1)
+                        ColorValue("#A80000")
+                    BorderThickness: =1
+                    ChevronBackground: =RGBA(0, 0, 0, 0)
+                    ChevronFill: =RGBA(168, 0, 0, 1)
+                    Default: |-
+                        =//"1"
+                        Customer
+                    Height: =50
+                    Items: =Accounts
+                    SelectionFill: =RGBA(168, 0, 0, 1)
+                    Size: =16
+                    Width: =575
+                    X: =30
+                    Y: =DataCardKey3_1.Y + DataCardKey3_1.Height + 5
+                    ZIndex: =1
+
+                DataCardKey3_1 As label:
+                    AutoHeight: =true
+                    Size: =19
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    ZIndex: =3
+
+            Notes_DataCard1 As typedDataCard.textualMultiLineEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="a1a_notes"
+                Default: =ThisItem.Notes
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@'Sales Calls'],DataSourceInfo.DisplayName,"a1a_notes")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =201
+                Required: =false
+                Update: =DataCardValue4.Text
+                Width: =640
+                X: =0
+                Y: =4
+                ZIndex: =1
+
+                DataCardKey5 As label:
+                    AutoHeight: =true
+                    Height: =48
+                    Size: =19
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue4 As text:
+                    BorderColor: =RGBA(168, 0, 0, 1)
+                    BorderThickness: =1
+                    Default: |-
+                        =Parent.Default
+                        //drp_Customer.Selected.'Full Name'
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Font: =Font.'Segoe UI'
+                    Height: =140
+                    Mode: =TextMode.MultiLine
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =18
+                    Tooltip: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage4 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =24
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue4.Y + DataCardValue4.Height
+                    ZIndex: =3
+
+                StarVisible4 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey5.Height
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey5.Y
+                    ZIndex: =4
+
+            Name_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="a1a_name"
+                Default: =ThisItem.Name
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@'Sales Calls'],DataSourceInfo.DisplayName,"a1a_name")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@'Sales Calls'], DataSourceInfo.MaxLength, "a1a_name")
+                Required: =true
+                Update: =DataCardValue1.Text
+                Visible: =false
+                Width: =640
+                X: =0
+                Y: =0
+                ZIndex: =5
+
+                DataCardKey1 As label:
+                    AutoHeight: =true
+                    Size: =19
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue1 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: |-
+                        =//Parent.Default
+                        $"{Customer} - Sales Call"
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =50
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =16
+                    Tooltip: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage1 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =24
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue1.Y + DataCardValue1.Height
+                    ZIndex: =3
+
+                StarVisible1 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey1.Height
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey1.Y
+                    ZIndex: =4
+
+        lbl_NewSalesCall As label:
+            Align: =Align.Center
+            AutoHeight: =true
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =75
+            Size: =26
+            Text: ="New Sales Call "
+            Width: =640
+            ZIndex: =5
+
+        grp_AddSales_1 As group:
+            Height: =5
+            Width: =5
+            X: =15
+            Y: =-865
+            ZIndex: =8
+
+            btn_Add_1 As button:
+                BorderStyle: =BorderStyle.None
+                Fill: =RGBA(168, 0, 0, 1)
+                Height: =69
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: |-
+                    =//Navigate('Add Sales Caller Screen',Fade);
+                    
+                    //create new sales call
+                    SubmitForm(SalesCallForm);
+                    NewForm(SalesCallForm);
+                    Refresh('Sales Calls');
+                    Navigate('View Account Screen',Fade);
+                    //Set(DesiredOutput,'PowerApp->Compose'.Run(JSON(First(AudioCollection),JSONFormat.IncludeBinaryData)));
+                PressedColor: =White
+                PressedFill: =ColorFade(Self.Fill, -20%)
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
+                Size: =20
+                Text: ="Add New Sales"
+                Width: =609
+                X: =16
+                Y: =997
+                ZIndex: =6
+
+            icn_Add_1 As icon.Add:
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =48
+                Icon: =Icon.Add
+                OnSelect: |-
+                    =//Navigate('Add Sales Caller Screen',Fade);
+                    
+                    //create new sales call
+                    SubmitForm(SalesCallForm);
+                    NewForm(SalesCallForm);
+                    
+                    
+                    //Set(DesiredOutput,'PowerApp->Compose'.Run(JSON(First(AudioCollection),JSONFormat.IncludeBinaryData)));
+                Width: =55
+                X: =516
+                Y: =1010
+                ZIndex: =7
+
+    Image2_1 As image:
+        Height: =91
+        Image: ='DON CRM DEMO'
+        Width: =272
+        Y: =1
+        ZIndex: =8
+
+    TextOutput As label:
+        Height: =70
+        Size: =21
+        Text: =//DesiredOutput
+        Visible: =false
+        Width: =560
+        Y: =138
+        ZIndex: =9
+
+    AudioJSON As label:
+        Height: =70
+        Size: =21
+        Text: =//Text(JSONValue)
+        Visible: =false
+        Width: =560
+        Y: =111
+        ZIndex: =10
+
