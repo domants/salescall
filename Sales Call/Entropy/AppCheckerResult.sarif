@@ -1064,19 +1064,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'View Account Screen'.TextInput1.AccessibleLabel"
+                  "fullyQualifiedName": "'View Account Screen'.txt_Notes.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'View Account Screen'.TextInput1.AccessibleLabel",
+                  "fullyQualifiedName": "'View Account Screen'.txt_Notes.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "View Account Screen",
-                "type": "'View Account Screen'.TextInput1"
+                "type": "'View Account Screen'.txt_Notes"
               }
             }
           ],

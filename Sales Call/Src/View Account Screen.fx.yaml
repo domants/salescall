@@ -475,7 +475,7 @@
             Y: =iconSelectedEmail_1.Y - 5
             ZIndex: =23
 
-        lblSelectedAccountEmail_2 As label:
+        lbl_notes As label:
             AutoHeight: =true
             FontWeight: =FontWeight.Semibold
             Size: =16
@@ -567,7 +567,7 @@
         Y: =584
         ZIndex: =7
 
-    TextInput1 As text:
+    txt_Notes As text:
         Default: =Account.Description
         Height: =123
         Mode: =TextMode.MultiLine
