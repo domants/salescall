@@ -1,6 +1,13 @@
 {
   "QualifiedValues": [
     {
+      "Kind": "default.cds_a1a_salescalls_forms",
+      "Namespace": "Sales Calls (Forms)",
+      "Values": {
+        "Information": "be37d383-f835-4b60-8fd4-aa36862748a5"
+      }
+    },
+    {
       "Kind": "default.cds_account_forms",
       "Namespace": "Accounts (Forms)",
       "Values": {
@@ -60,21 +67,6 @@
       }
     },
     {
-      "Kind": "default.cds_annotation_forms",
-      "Namespace": "Notes (Forms)",
-      "Values": {
-        "Information": "69e5bd50-3d3e-47ca-aabc-d47bcbe59775",
-        "Note Quick Create Form": "56edcfe7-b4f3-4378-bab5-fc8f40db3af3"
-      }
-    },
-    {
-      "Kind": "default.cds_a1a_salescalls_forms",
-      "Namespace": "Sales Calls (Forms)",
-      "Values": {
-        "Information": "be37d383-f835-4b60-8fd4-aa36862748a5"
-      }
-    },
-    {
       "Kind": "default.cds_systemuser_forms",
       "Namespace": "Users (Forms)",
       "Values": {
@@ -84,6 +76,14 @@
         "User form – Business": "c2413504-7eb2-4c59-a087-95d819866114",
         "User Hierarchy Tile Form": "c68d6c09-d7a7-4959-8d0f-44b8cff9b452",
         "User Information Form": "20bc9121-0a7c-46b6-9c11-5db245e8214d"
+      }
+    },
+    {
+      "Kind": "default.cds_annotation_forms",
+      "Namespace": "Notes (Forms)",
+      "Values": {
+        "Information": "69e5bd50-3d3e-47ca-aabc-d47bcbe59775",
+        "Note Quick Create Form": "56edcfe7-b4f3-4378-bab5-fc8f40db3af3"
       }
     }
   ]
