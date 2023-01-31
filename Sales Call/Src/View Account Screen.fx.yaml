@@ -14,8 +14,7 @@
         RadiusTopRight: =50
         Size: =24
         Text: =""
-        Width: =596
-        X: =22
+        Width: =640
         Y: =503
         ZIndex: =1
 
@@ -31,8 +30,7 @@
         RadiusTopRight: =50
         Size: =24
         Text: =""
-        Width: =596
-        X: =22
+        Width: =640
         Y: =92
         ZIndex: =2
 
@@ -91,8 +89,8 @@
                 =//"Website"
                 Coalesce(Account.City,"Melbourne")
             Width: =399
-            X: =148
-            Y: =251
+            X: =118
+            Y: =246
             ZIndex: =7
 
         lblSelectedAccountPhone As label:
@@ -104,8 +102,8 @@
                 =//"Phone"
                 Coalesce(Account.'Main Phone',"555-555-6276")
             Width: =399
-            X: =148
-            Y: =323
+            X: =118
+            Y: =318
             ZIndex: =8
 
         lblSelectedAccountContact As label:
@@ -119,8 +117,8 @@
                 
                 Coalesce(Account.'Primary Contact'.'Full Name',"PrimaryContact")
             Width: =399
-            X: =148
-            Y: =287
+            X: =118
+            Y: =282
             ZIndex: =9
 
         lblSelectedAccountEmail As label:
@@ -130,8 +128,8 @@
             Size: =12
             Text: =Account.'Account Type'
             Width: =399
-            X: =148
-            Y: =359
+            X: =118
+            Y: =354
             ZIndex: =10
 
         iconSelectedPhone As image:
@@ -144,8 +142,8 @@
                 </svg>
                 ")
             Width: =20
-            X: =120
-            Y: =291
+            X: =90
+            Y: =286
             ZIndex: =12
 
         iconSelectedWebsite As image:
@@ -157,8 +155,8 @@
                 </svg>
                 ")
             Width: =20
-            X: =120
-            Y: =255
+            X: =90
+            Y: =250
             ZIndex: =13
 
         iconSelectedEmail As image:
@@ -171,8 +169,8 @@
                 </svg>
                 ")
             Width: =20
-            X: =120
-            Y: =363
+            X: =90
+            Y: =358
             ZIndex: =14
 
         iconSelectedContact As image:
@@ -184,8 +182,8 @@
                 </svg>
                 ")
             Width: =20
-            X: =120
-            Y: =327
+            X: =90
+            Y: =322
             ZIndex: =15
 
         Label1 As label:
@@ -218,7 +216,7 @@
 
         gal_activity As gallery.galleryVertical:
             BorderColor: =RGBA(166, 166, 166, 1)
-            Height: =460
+            Height: =487
             Items: |-
                 =//-Account Activity
                 //Switch(_selActivity,"Tasks",Sort(Filter(Tasks,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Phone Calls",Sort(Filter('Phone Calls',AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Appointments",Sort(Filter(Appointments,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Emails",Sort(Filter('Email Messages',AsType(Regarding,[@Accounts]).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),Sort(Filter(Activities,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Date Created',Descending))
@@ -239,13 +237,13 @@
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
-            TemplateSize: =108
+            TemplateSize: =94
             Visible: |-
                 =//If(Value(CountRows(gal_activity_1.AllItems)) > 0, true, false)
                 true
             Width: =582
             X: =36
-            Y: =674
+            Y: =644
             ZIndex: =18
 
             HtmlText2_3 As htmlViewer:
@@ -480,8 +478,8 @@
                 </svg>
                 ")
             Width: =20
-            X: =120
-            Y: =411
+            X: =90
+            Y: =406
             ZIndex: =22
 
         lblSelectedAccountEmail_1 As label:
@@ -493,8 +491,8 @@
                 =//Account.'Account Type'
                 "Unscheduled meeting with Victorian Frozen Foods Distributors Pty Ltd regarding the price hike"
             Width: =399
-            X: =148
-            Y: =395
+            X: =118
+            Y: =390
             ZIndex: =23
 
         lbl_notes As label:
