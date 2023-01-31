@@ -505,7 +505,7 @@
                 RadiusTopLeft: =15
                 RadiusTopRight: =15
                 Size: =25
-                Text: ="SAVE"
+                Text: =If(Lower(lbl_handleAddEdit.Text) = "edit","UPDATE","SAVE")
                 Width: =609
                 X: =16
                 Y: =997
