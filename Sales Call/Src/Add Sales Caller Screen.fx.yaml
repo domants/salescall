@@ -504,7 +504,8 @@
                     //create new sales call
                     SubmitForm(SalesCallForm);
                     NewForm(SalesCallForm);
-                    
+                    Refresh('Sales Calls');
+                    Navigate('View Account Screen',Fade);
                     
                     //Set(DesiredOutput,'PowerApp->Compose'.Run(JSON(First(AudioCollection),JSONFormat.IncludeBinaryData)));
                 Width: =55
