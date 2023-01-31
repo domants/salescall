@@ -110,7 +110,6 @@
     "Label1": 128,
     "Label2": 78,
     "Label2_1": 59,
-    "Label3": 66,
     "Label5": 48,
     "Label6": 83,
     "lbl_AccName": 89,
@@ -167,7 +166,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/31/2023 01:08:50",
+  "HeaderLastSavedDateTimeUTC": "01/31/2023 01:08:58",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "ccc6254a-0ffb-490a-b268-4fb11ed2d314": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/880f22d9d7af49b4868039708ed4183e\""
@@ -491,7 +490,6 @@
     "Label1": {},
     "Label2": {},
     "Label2_1": {},
-    "Label3": {},
     "Label5": {},
     "Label6": {},
     "lbl_AccName": {},
@@ -654,7 +652,6 @@
     "Label1": 62,
     "Label2": 12,
     "Label2_1": 144,
-    "Label3": 28,
     "Label5": 132,
     "Label6": 17,
     "lbl_AccName": 23,
