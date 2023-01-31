@@ -46,7 +46,7 @@
                                 "primarycontact",
                                 'Primary Contact'.'Full Name'
                             ),
-                            'Account Type' = 'Account Type (Accounts)'.Distributor
+                            'Account Type' = 'Account Type (Accounts)'.Distributor && Status = 'Status (Accounts)'.Active
                         ),
                         txt_SearchInput.Text,
                         "primarycontact",
@@ -61,7 +61,7 @@
                                 "primarycontact",
                                 'Primary Contact'.'Full Name'
                             ),
-                            'Account Type' = 'Account Type (Accounts)'.'End User'
+                            'Account Type' = 'Account Type (Accounts)'.'End User' && Status = 'Status (Accounts)'.Active
                         ),
                         txt_SearchInput.Text,
                         "name",
@@ -77,7 +77,7 @@
                                 "primarycontact",
                                 'Primary Contact'.'Full Name'
                             ),
-                            Or('Account Type' = 'Account Type (Accounts)'.'End User','Account Type' = 'Account Type (Accounts)'.Distributor)
+                            Or('Account Type' = 'Account Type (Accounts)'.'End User','Account Type' = 'Account Type (Accounts)'.Distributor) && Status = 'Status (Accounts)'.Active
                         ),
                         txt_SearchInput.Text,
                         "name",
@@ -91,7 +91,7 @@
                                 "primarycontact",
                                 'Primary Contact'.'Full Name'
                             ),
-                            Or('Account Type' = 'Account Type (Accounts)'.'End User','Account Type' = 'Account Type (Accounts)'.Distributor)
+                            Or('Account Type' = 'Account Type (Accounts)'.'End User','Account Type' = 'Account Type (Accounts)'.Distributor) && Status = 'Status (Accounts)'.Active
                         ),
                         txt_SearchInput.Text,
                         "name",

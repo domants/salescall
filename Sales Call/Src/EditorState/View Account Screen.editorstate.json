@@ -126,7 +126,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "background_3",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -344,14 +344,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Fill",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Fill",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -723,7 +716,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btn_Add",
-      "ParentIndex": 18,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2057,7 +2050,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Circle1_4",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2357,7 +2350,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ctn_BottomNav_3",
-      "ParentIndex": 11,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2533,7 +2526,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "gal_activity",
-      "ParentIndex": 15,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2968,7 +2961,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "grp_AddSales",
-      "ParentIndex": 20,
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3076,14 +3069,6 @@
           "InvariantPropertyName": "HtmlText",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Visible",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -3177,11 +3162,6 @@
         {
           "Category": "Design",
           "PropertyName": "ZIndex",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Visible",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -3399,7 +3379,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icn_add",
-      "ParentIndex": 10,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3591,7 +3571,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icn_Add",
-      "ParentIndex": 19,
+      "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3789,7 +3769,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icn_back_1",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4209,7 +4189,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon2_1",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4421,7 +4401,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconSelectedContact",
-      "ParentIndex": 8,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4658,7 +4638,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconSelectedEmail",
-      "ParentIndex": 10,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4895,7 +4875,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconSelectedEmail_1",
-      "ParentIndex": 12,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5132,7 +5112,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconSelectedPhone",
-      "ParentIndex": 6,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5369,7 +5349,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconSelectedWebsite",
-      "ParentIndex": 4,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5814,7 +5794,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image3",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6007,45 +5987,17 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Fill",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Fill",
         "DisabledFill",
         "PressedFill",
         "HoverFill",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "BorderColor",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "BorderColor",
         "DisabledBorderColor",
         "PressedBorderColor",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "ColorFade(Self.BorderColor, 20%)",
-          "InvariantPropertyName": "HoverBorderColor",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "HoverBorderColor",
         "FocusedBorderColor",
         "BorderStyle",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "DisplayMode",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "DisplayMode",
         "ZIndex",
         {
           "AFDDataSourceName": "",
@@ -6079,14 +6031,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "BorderThickness",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "BorderThickness",
         "FocusedBorderThickness",
         "PaddingTop",
         "PaddingRight",
@@ -6103,7 +6048,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image4",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6621,7 +6566,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1",
-      "ParentIndex": 13,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6953,7 +6898,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lbl_notes",
-      "ParentIndex": 16,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8167,7 +8112,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblGetTime_1",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8725,14 +8670,7 @@
         "DisabledFill",
         "PressedFill",
         "HoverFill",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Font",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Font",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -9049,14 +8987,7 @@
         "DisabledFill",
         "PressedFill",
         "HoverFill",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Font",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Font",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -9138,7 +9069,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSelectedAccountContact",
-      "ParentIndex": 5,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9380,14 +9311,7 @@
         "DisabledFill",
         "PressedFill",
         "HoverFill",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Font",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Font",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -9469,7 +9393,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSelectedAccountEmail",
-      "ParentIndex": 9,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9711,14 +9635,7 @@
         "DisabledFill",
         "PressedFill",
         "HoverFill",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Font",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Font",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -9807,7 +9724,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSelectedAccountEmail_1",
-      "ParentIndex": 11,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10049,14 +9966,7 @@
         "DisabledFill",
         "PressedFill",
         "HoverFill",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Font",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Font",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -10138,7 +10048,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSelectedAccountPhone",
-      "ParentIndex": 7,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10380,14 +10290,7 @@
         "DisabledFill",
         "PressedFill",
         "HoverFill",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Font",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Font",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -10697,14 +10600,7 @@
         "DisabledFill",
         "PressedFill",
         "HoverFill",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Font",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Font",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -10786,7 +10682,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSelectedAccountWebsite",
-      "ParentIndex": 3,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11398,7 +11294,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "noRecordFoundTimeline",
-      "ParentIndex": 17,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11687,7 +11583,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tmrGetCurrentTime_1",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11933,7 +11829,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txt_Notes",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12260,7 +12156,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txtTotalActivity_1",
-      "ParentIndex": 14,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
