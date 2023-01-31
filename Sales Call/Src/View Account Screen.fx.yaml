@@ -607,6 +607,7 @@
         BorderThickness: =5
         Fill: =RGBA(168, 0, 0, 1)
         Font: =Font.Lato
+        Height: =55
         HoverColor: =RGBA(168, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         OnSelect: |-
@@ -616,7 +617,7 @@
         Text: ="Save"
         Width: =168
         X: =236
-        Y: =1039
+        Y: =1030
         ZIndex: =13
 
     grp_BottomNav_2 As group:
