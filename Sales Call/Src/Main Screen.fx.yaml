@@ -108,6 +108,7 @@
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
+                Size: =22
                 Text: =ThisItem.'Account Name'
                 VerticalAlign: =VerticalAlign.Top
                 Width: =Parent.TemplateWidth - img_AccountImage.Width - 104
@@ -126,7 +127,7 @@
                 VerticalAlign: =VerticalAlign.Top
                 Width: =lbl_AccName.Width
                 X: =lbl_AccName.X
-                Y: =lbl_AccName.Y + lbl_AccName.Height + 4
+                Y: =78
                 ZIndex: =3
 
             NextArrow1 As icon.ChevronRight:
@@ -140,6 +141,7 @@
                 PaddingTop: =10
                 TabIndex: =0
                 Tooltip: ="View item details"
+                Visible: =false
                 Width: =60
                 X: =Parent.TemplateWidth - Self.Width - 5
                 Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
@@ -153,13 +155,14 @@
                 ZIndex: =5
 
             lbl_AccType As label:
+                Color: =RGBA(184, 0, 0, 1)
                 Height: =Self.Size * 1.8
                 OnSelect: =Select(Parent)
                 Size: =16
                 Text: =ThisItem.'Account Type'
                 Width: =160
                 X: =450
-                Y: =lbl_AccName.Y + lbl_AccName.Height + 4
+                Y: =78
                 ZIndex: =6
 
             btn_Hover As button:
@@ -181,6 +184,15 @@
                 Width: =640
                 ZIndex: =7
 
+            Icon1 As icon.NextArrow:
+                Height: =35
+                Icon: =Icon.NextArrow
+                OnSelect: =Select(Parent)
+                Width: =35
+                X: =583
+                Y: =46
+                ZIndex: =8
+
         lbl_AccountText As label:
             Align: =Align.Center
             AutoHeight: =true
@@ -199,11 +211,11 @@
             BorderThickness: =1
             Default: =""
             Font: =Font.'Segoe UI'
-            Height: =50
-            HintText: =""
+            Height: =49
+            HintText: ="Search..."
             Size: =16
-            Width: =508
-            X: =116
+            Width: =599
+            X: =21
             Y: =70
             ZIndex: =4
 
@@ -227,10 +239,19 @@
             Size: =21
             Text: |-
                 ="Search:"
+            Visible: =false
             Width: =105
             X: =10
             Y: =75
             ZIndex: =8
+
+        icn_search As icon.Search:
+            Height: =32
+            Icon: =Icon.Search
+            Width: =36
+            X: =581
+            Y: =79
+            ZIndex: =9
 
     ctn_ShowFilter As groupContainer.manualLayoutContainer:
         Fill: =RGBA(219, 219, 219, 0.71)
