@@ -343,7 +343,7 @@
                         =//Parent.Default
                         //drp_Customer.Selected.'Full Name'
                         
-                        If(varSetEdit = "edit",PlainText(AccContext.'Subject '),PlainText(Parent.Default))
+                        If(varSetEdit = "edit",PlainText(AccContext.Notes),PlainText(Parent.Default))
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
                     Fill: =RGBA(240, 240, 240, 1)
