@@ -335,7 +335,7 @@
                         =//Parent.Default
                         //drp_Customer.Selected.'Full Name'
                         
-                        If(varSetEdit = "edit",PlainText(AccContext.'Subject '),Parent.Default)
+                        If(varSetEdit = "edit",PlainText(AccContext.'Subject '),PlainText(Parent.Default))
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
                     Font: =Font.'Segoe UI'
