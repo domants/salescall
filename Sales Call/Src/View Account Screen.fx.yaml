@@ -481,6 +481,7 @@
             Size: =16
             Text: |-
                 ="Notes:"
+            Visible: =false
             Width: =145
             X: =18
             Y: =841
@@ -572,6 +573,7 @@
         Height: =123
         Mode: =TextMode.MultiLine
         Size: =21
+        Visible: =false
         Width: =596
         X: =22
         Y: =875
@@ -588,6 +590,16 @@
         X: =275
         Y: =64
         ZIndex: =12
+
+    icn_back_1 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =40
+        Icon: =Icon.BackArrow
+        OnSelect: =Back(Fade)
+        Width: =40
+        X: =578
+        Y: =64
+        ZIndex: =13
 
     grp_BottomNav_2 As group:
         Height: =5
