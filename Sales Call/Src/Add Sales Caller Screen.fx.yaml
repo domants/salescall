@@ -485,6 +485,7 @@
                 =Navigate('View Account Screen',Fade);
                 SubmitForm(SalesCallForm);
                 NewForm(SalesCallForm);
+                Refresh('Sales Calls')
             Size: =24
             Text: =If(varSetEdit = "edit","UPDATE","SAVE")
             Width: =466
