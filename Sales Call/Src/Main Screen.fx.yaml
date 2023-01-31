@@ -1,5 +1,7 @@
 "'Main Screen' As screen":
     Fill: =RGBA(17, 28, 78, 1)
+    OnVisible: |-
+        =UpdateContext({_showFilter:false})
 
     ctn_main As groupContainer.manualLayoutContainer:
         Height: =1040
@@ -694,7 +696,7 @@
         DisabledColor: =RGBA(128, 128, 128, 1)
         DisabledFill: =RGBA(240, 240, 240, 1)
         Fill: =If(_AccountFilter = Blank(), RGBA(240, 240, 240, 1), Transparent)
-        Font: =Font.Lato
+        Font: =Font.'Lato Black'
         FontWeight: =FontWeight.Normal
         Height: =55
         HoverBorderColor: =RGBA(128, 128, 128, 1)
