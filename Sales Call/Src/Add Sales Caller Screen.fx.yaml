@@ -350,7 +350,7 @@
                     Font: =Font.Lato
                     Height: =240
                     Mode: =TextMode.MultiLine
-                    PaddingLeft: =5
+                    PaddingLeft: =25
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
