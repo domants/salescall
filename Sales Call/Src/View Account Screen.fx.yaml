@@ -1,21 +1,40 @@
 "'View Account Screen' As screen":
     Fill: =RGBA(17, 28, 78, 1)
 
-    background_3 As button:
+    background_4 As button:
         BorderStyle: =BorderStyle.None
         DisabledColor: =RGBA(176, 26, 26, 1)
         DisabledFill: =RGBA(255, 255, 255, 1)
         DisplayMode: =DisplayMode.Disabled
-        Height: =1044
-        RadiusBottomLeft: =0
+        Height: =632
+        RadiusBottomLeft: |
+            =0
         RadiusBottomRight: =0
         RadiusTopLeft: =50
         RadiusTopRight: =50
         Size: =24
         Text: =""
-        Width: =Parent.Width
-        Y: =92
+        Width: =596
+        X: =22
+        Y: =503
         ZIndex: =1
+
+    background_3 As button:
+        BorderStyle: =BorderStyle.None
+        DisabledColor: =RGBA(176, 26, 26, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =395
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =24
+        Text: =""
+        Width: =596
+        X: =22
+        Y: =92
+        ZIndex: =2
 
     containerContent As groupContainer.manualLayoutContainer:
         BorderColor: =
@@ -23,7 +42,7 @@
         BorderThickness: =1
         Height: =1136
         Width: =640
-        ZIndex: =2
+        ZIndex: =3
 
         HtmlText1_1 As htmlViewer:
             Height: =334
@@ -60,55 +79,59 @@
                 =Coalesce($"Customer Since: {Text(Account.'Created On',"dd/mm/yyyy")}","Customer Since: 18/12/2022")
                 //"Customer Since"
             Width: =Parent.Width
-            Y: =194
+            Y: =193
             ZIndex: =5
 
         lblSelectedAccountWebsite As label:
             AutoHeight: =true
             Font: =Font.Lato
             Height: =19
+            Size: =12
             Text: |-
                 =//"Website"
                 Coalesce(Account.City,"Melbourne")
-            Width: =495
-            X: =144
-            Y: =240
+            Width: =399
+            X: =148
+            Y: =251
             ZIndex: =7
 
         lblSelectedAccountPhone As label:
             AutoHeight: =true
             Font: =Font.Lato
             Height: =39
+            Size: =12
             Text: |-
                 =//"Phone"
                 Coalesce(Account.'Main Phone',"555-555-6276")
-            Width: =495
-            X: =144
-            Y: =320
+            Width: =399
+            X: =148
+            Y: =323
             ZIndex: =8
 
         lblSelectedAccountContact As label:
             AutoHeight: =true
             Font: =Font.Lato
             Height: =22
+            Size: =12
             Text: |-
                 =//"PrimaryContact"
                 //Coalesce(galAccountsValues.Selected.lblPrimaryContact.Text,"Benjamin Smith")
                 
                 Coalesce(Account.'Primary Contact'.'Full Name',"PrimaryContact")
-            Width: =495
-            X: =144
-            Y: =280
+            Width: =399
+            X: =148
+            Y: =287
             ZIndex: =9
 
         lblSelectedAccountEmail As label:
             AutoHeight: =true
             Font: =Font.Lato
             Height: =24
+            Size: =12
             Text: =Account.'Account Type'
-            Width: =495
-            X: =144
-            Y: =360
+            Width: =399
+            X: =148
+            Y: =359
             ZIndex: =10
 
         iconSelectedPhone As image:
@@ -121,8 +144,8 @@
                 </svg>
                 ")
             Width: =20
-            X: =18
-            Y: =iconSelectedWebsite.Height + iconSelectedWebsite.Y + 20
+            X: =120
+            Y: =291
             ZIndex: =12
 
         iconSelectedWebsite As image:
@@ -134,8 +157,8 @@
                 </svg>
                 ")
             Width: =20
-            X: =18
-            Y: =245
+            X: =120
+            Y: =255
             ZIndex: =13
 
         iconSelectedEmail As image:
@@ -148,8 +171,8 @@
                 </svg>
                 ")
             Width: =20
-            X: =18
-            Y: =iconSelectedContact.Height + iconSelectedContact.Y + 20
+            X: =120
+            Y: =363
             ZIndex: =14
 
         iconSelectedContact As image:
@@ -161,39 +184,41 @@
                 </svg>
                 ")
             Width: =20
-            X: =18
-            Y: =iconSelectedPhone.Height + iconSelectedPhone.Y + 20
+            X: =120
+            Y: =327
             ZIndex: =15
 
         Label1 As label:
             AutoHeight: =true
+            Font: =Font.'Lato Black'
             FontWeight: =FontWeight.Bold
             Height: =35
-            PaddingLeft: =20
-            Size: =15
-            Text: |-
-                ="Sales Call Activity:"
-            Width: =Parent.Width
-            Y: =555
+            PaddingLeft: =50
+            Size: =22
+            Text: ="Sales Call Activity"
+            Width: =596
+            X: =22
+            Y: =539
             ZIndex: =16
 
         txtTotalActivity_1 As label:
             AutoHeight: =true
             BorderColor: =RGBA(89, 0, 0, 1)
-            Font: =Font.'Segoe UI'
+            Color: =RGBA(116, 116, 116, 1)
+            Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
             Height: =55
-            PaddingLeft: =20
-            Size: =12
+            Size: =11
             Text: |-
                 ="Activities: ("&CountRows(gal_activity.AllItems)&")"
             Width: =130
-            Y: =593
+            X: =68
+            Y: =577
             ZIndex: =17
 
         gal_activity As gallery.galleryVertical:
             BorderColor: =RGBA(166, 166, 166, 1)
-            Height: =372
+            Height: =464
             Items: |-
                 =//-Account Activity
                 //Switch(_selActivity,"Tasks",Sort(Filter(Tasks,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Phone Calls",Sort(Filter('Phone Calls',AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Appointments",Sort(Filter(Appointments,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Emails",Sort(Filter('Email Messages',AsType(Regarding,[@Accounts]).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),Sort(Filter(Activities,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Date Created',Descending))
@@ -214,11 +239,13 @@
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
-            TemplateSize: =123
+            TemplateSize: =145
             Visible: |-
                 =//If(Value(CountRows(gal_activity_1.AllItems)) > 0, true, false)
                 true
-            Y: =631
+            Width: =596
+            X: =22
+            Y: =665
             ZIndex: =18
 
             HtmlText2_3 As htmlViewer:
@@ -226,6 +253,7 @@
                 HtmlText: |-
                     ="<div style='margin:0px;width:"&HtmlText2_3.Width&"-25px;height:"&HtmlText2_3.Height&"-25px;background-Color:white;box-shadow:0 3px 6px 1px  #ccc; border-radius:5px'></div>"
                 OnSelect: =Select(Parent)
+                Visible: =false
                 Width: =Parent.Width
                 ZIndex: =1
 
@@ -243,8 +271,8 @@
                 OnSelect: =Select(Parent)
                 PressedFill: =RGBA(0, 120, 212, 1)
                 Width: =35
-                X: =5
-                Y: =20
+                X: =38
+                Y: =5
                 ZIndex: =3
 
             lblSubject_1 As label:
@@ -254,18 +282,18 @@
                 BorderThickness: =1
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 FocusedBorderThickness: =1
-                Font: =Font.'Segoe UI'
+                Font: =Font.Lato
                 FontWeight: =FontWeight.Semibold
                 Height: =46
                 OnSelect: =Select(Parent)
                 PaddingLeft: =0
-                Size: =18
+                Size: =14
                 Text: |
                     =//ThisItem.subject
                     Coalesce(ThisItem.'Subject ',"Subject")
-                Width: =522
-                X: =56
-                Y: =25
+                Width: =388
+                X: =98
+                Y: =23
                 ZIndex: =4
 
             imgActivity_1 As image:
@@ -275,7 +303,7 @@
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 FocusedBorderThickness: =1
-                Height: =25
+                Height: =15
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Image: |-
@@ -290,27 +318,29 @@
                 Visible: |-
                     =//If(IsBlank(ThisItem.subject),false,true)
                     true
-                Width: =25
-                X: =10
-                Y: =25
+                Width: =15
+                X: =48
+                Y: =15
                 ZIndex: =5
 
             lblCreatedOn_1 As label:
                 Align: =Align.Center
-                AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
+                Color: =RGBA(116, 116, 116, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(237, 237, 237, 1)
                 FocusedBorderThickness: =1
-                Font: =Font.'Segoe UI'
-                Height: =38
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Height: =18
                 OnSelect: =Select(Parent)
-                PaddingLeft: =0
-                Size: =14
-                Text: =Coalesce(Text(DateValue(ThisItem.'Created On'),"dd.mm.yyyy"),"12/22/2022")
-                X: =480
-                Y: =4
+                Size: =9
+                Text: =Coalesce(Text(DateValue(ThisItem.'Created On'),"mm/mm/yyyy"),"12/22/2022")
+                Width: =86
+                X: =98
+                Y: =5
                 ZIndex: =6
 
             lblGetActivityLabel_1 As label:
@@ -355,24 +385,31 @@
                 ZIndex: =8
 
             lblNotes As label:
-                AutoHeight: =true
-                Color: =RGBA(255, 255, 255, 1)
-                Height: =45
+                Color: =RGBA(116, 116, 116, 1)
+                Font: =Font.Lato
+                Height: =44
+                Italic: =true
                 OnSelect: =Select(Parent)
+                PaddingLeft: =0
+                Size: =11
                 Text: |-
                     =//AsType(ThisItem.Regarding,Contacts).'Full Name'
                     
                     Coalesce(ThisItem.Notes,"Notes")
-                Width: =414
-                X: =lblCustomer.Width + lblCustomer.X + 5
-                Y: =50
+                VerticalAlign: =VerticalAlign.Top
+                Width: =466
+                X: =98
+                Y: =73
                 ZIndex: =9
 
             lblCustomer As label:
                 AutoHeight: =true
+                Color: =RGBA(116, 116, 116, 1)
+                Font: =Font.Lato
                 Height: =32
                 OnSelect: =Select(Parent)
                 PaddingLeft: =0
+                Size: =12
                 Text: |-
                     =//Text(DateValue(ThisItem.'Created On'),"mmmm dd, yyyy")
                     //Coalesce(AsType(ThisItem.'Customer ',Accounts).'Account Name',"Customer")
@@ -380,13 +417,13 @@
                     
                     //Coalesce(Text(DateValue(ThisItem.'Created By'.'Full Name'),"mmmm dd, yyyy"),"Notes")
                 Width: =394
-                X: =56
-                Y: =lblSubject_1.Y + lblSubject_1.Height
+                X: =98
+                Y: =44
                 ZIndex: =10
 
             btn_overlay As button:
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =105
+                Height: =95
                 HoverFill: =ColorFade(RGBA(56, 96, 178, 0), -20%)
                 OnSelect: |-
                     =Select( Parent );Navigate('Add Sales Caller Screen',Fade,{handleEditAdd:"Edit",AccContext:ThisItem});
@@ -397,7 +434,7 @@
                     Transparent
                 Size: =24
                 Text: =""
-                Width: =630
+                Width: =586
                 Y: =10
                 ZIndex: =11
 
@@ -429,20 +466,21 @@
                 </svg>
                 ")
             Width: =20
-            X: =18
-            Y: =iconSelectedEmail.Height + iconSelectedEmail.Y + 20
+            X: =120
+            Y: =411
             ZIndex: =22
 
         lblSelectedAccountEmail_1 As label:
             AutoHeight: =true
             Font: =Font.Lato
             Height: =32
+            Size: =12
             Text: |-
                 =//Account.'Account Type'
                 "Unscheduled meeting with Victorian Frozen Foods Distributors Pty Ltd regarding the price hike"
-            Width: =495
-            X: =144
-            Y: =400
+            Width: =399
+            X: =148
+            Y: =395
             ZIndex: =23
 
         lbl_notes As label:
@@ -506,7 +544,7 @@
         Width: =115
         X: =525
         Y: =1
-        ZIndex: =3
+        ZIndex: =4
 
     tmrGetCurrentTime_1 As timer:
         AutoStart: =true
@@ -516,7 +554,7 @@
         Repeat: =true
         Visible: =false
         X: =375
-        ZIndex: =4
+        ZIndex: =5
 
     Image3 As image:
         Height: =91
@@ -525,7 +563,7 @@
         Visible: =false
         Width: =272
         Y: =1
-        ZIndex: =5
+        ZIndex: =6
 
     Icon2_1 As icon.HorizontalLine:
         BorderStyle: =BorderStyle.None
@@ -539,17 +577,125 @@
         Y: =584
         ZIndex: =7
 
+    ctn_BottomNav_3 As groupContainer.manualLayoutContainer:
+        Height: =80
+        Width: =App.Width
+        Y: =App.Height - Self.Height
+        ZIndex: =8
+
+        bkg_3 As button:
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(14, 13, 38, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(17, 28, 78, 1)
+            Height: =80
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Size: =24
+            Text: =""
+            Visible: =false
+            Width: =640
+            ZIndex: =1
+
+        "gal_nav_3 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+            Height: =Parent.Height
+            Items: |-
+                =Table(
+                    {
+                        id: 1,
+                        title:"Home",
+                        icon: Home
+                    },
+                    {
+                        id: 2,
+                        title: "Chart",
+                        icon: Printing3D
+                    }
+                )
+            OnSelect: |-
+                =Set(navSelected,ThisItem.id);
+                
+                //Navigate to screen
+                //If(navSelected = 1,Navigate('Main Screen',Fade),Navigate('Chart Screen',Fade))
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: |-
+                =//Parent.Width / 2
+                Parent.Width
+            Width: =Parent.Width
+            ZIndex: =5
+
+            Image1_2 As image:
+                Height: =46
+                OnSelect: =Select(Parent)
+                Visible: =false
+                Width: =Parent.TemplateWidth - 32
+                X: =(Parent.TemplateWidth / 2) - (Self.Width / 2)
+                Y: =34
+                ZIndex: =1
+
+            icn_nav_3 As icon.Home:
+                Color: =RGBA(179, 179, 179, 1)
+                Height: =60
+                Icon: =ThisItem.icon
+                OnSelect: =Select(Parent)
+                Visible: =false
+                Width: =60
+                X: =130
+                Y: =10
+                ZIndex: =4
+
+            btn_nav_overlay_3 As button:
+                BorderStyle: =BorderStyle.None
+                Color: |-
+                    =//RGBA(255, 255, 255, 1)
+                    ColorValue("#0E0D26")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =Parent.TemplateHeight
+                HoverColor: =RGBA(0, 0, 0, 0)
+                HoverFill: |-
+                    =//ColorFade(ColorValue("#0E0D26"), -20%)
+                    Color.Transparent
+                OnSelect: |-
+                    =Select(Parent);
+                    Set(navSelected,ThisItem.id);
+                PressedColor: =RGBA(179, 179, 179, 1)
+                PressedFill: |-
+                    =//ColorFade(ColorValue("#0E0D26"), -20%)
+                RadiusTopLeft: =30
+                RadiusTopRight: =30
+                Size: =24
+                Text: =""
+                Visible: =false
+                Width: =Parent.TemplateWidth
+                ZIndex: =5
+
+    Circle1_4 As circle:
+        BorderColor: =RGBA(168, 0, 0, 1)
+        BorderThickness: =3
+        Fill: =RGBA(168, 0, 0, 1)
+        Height: =80
+        Width: =80
+        X: =503
+        Y: =534
+        ZIndex: =9
+
     icn_add As icon.Add:
-        Color: =RGBA(230, 230, 230, 1)
-        Height: =50
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(255, 255, 255, 1)
+        HoverBorderColor: =
+        HoverColor: =RGBA(255, 255, 255, 1)
         Icon: =Icon.Add
         OnSelect: |-
             =NewForm(SalesCallForm);
             Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name',handleEditAdd:"Add"});
             Set(varSetEdit, "Add");
-        Width: =50
-        X: =295
-        Y: =1034
+        PressedColor: =White
+        Width: =52
+        X: =517
+        Y: =542
         ZIndex: =10
 
     txt_Notes As text:
@@ -568,7 +714,7 @@
         BorderThickness: =5
         Fill: =RGBA(17, 28, 78, 1)
         Height: =120
-        HoverBorderColor: =Self.Fill
+        HoverBorderColor: =Whi
         Image: =Account.'Default Image'
         RadiusBottomLeft: =150
         RadiusBottomRight: =150
@@ -578,18 +724,6 @@
         X: =260
         Y: =31
         ZIndex: =12
-
-    icn_back_1 As icon.BackArrow:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =45
-        Icon: =Icon.BackArrow
-        OnSelect: |-
-            =//Back(Fade)
-            Navigate('Main Screen',Fade)
-        Width: =45
-        X: =22
-        Y: =24
-        ZIndex: =13
 
     Button1 As button:
         BorderColor: =RGBA(168, 0, 0, 1)
@@ -610,112 +744,15 @@
         Y: =1081
         ZIndex: =13
 
-    grp_BottomNav_2 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =15
-
-        ctn_BottomNav_3 As groupContainer.manualLayoutContainer:
-            Height: =80
-            Width: =App.Width
-            Y: =App.Height - Self.Height
-            ZIndex: =8
-
-            bkg_3 As button:
-                BorderStyle: =BorderStyle.None
-                DisabledFill: =RGBA(14, 13, 38, 1)
-                DisplayMode: =DisplayMode.Disabled
-                Fill: =RGBA(17, 28, 78, 1)
-                Height: =80
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =30
-                RadiusTopRight: =30
-                Size: =24
-                Text: =""
-                Width: =640
-                ZIndex: =1
-
-            "gal_nav_3 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
-                Height: =Parent.Height
-                Items: |-
-                    =Table(
-                        {
-                            id: 1,
-                            title:"Home",
-                            icon: Home
-                        },
-                        {
-                            id: 2,
-                            title: "Chart",
-                            icon: Printing3D
-                        }
-                    )
-                OnSelect: |-
-                    =Set(navSelected,ThisItem.id);
-                    
-                    //Navigate to screen
-                    //If(navSelected = 1,Navigate('Main Screen',Fade),Navigate('Chart Screen',Fade))
-                ShowScrollbar: =false
-                TemplatePadding: =0
-                TemplateSize: |-
-                    =//Parent.Width / 2
-                    Parent.Width
-                Width: =Parent.Width
-                ZIndex: =5
-
-                Image1_2 As image:
-                    Height: =46
-                    OnSelect: =Select(Parent)
-                    Visible: =false
-                    Width: =Parent.TemplateWidth - 32
-                    X: =(Parent.TemplateWidth / 2) - (Self.Width / 2)
-                    Y: =34
-                    ZIndex: =1
-
-                icn_nav_3 As icon.Home:
-                    Color: =RGBA(179, 179, 179, 1)
-                    Height: =60
-                    Icon: =ThisItem.icon
-                    OnSelect: =Select(Parent)
-                    Visible: =false
-                    Width: =60
-                    X: =130
-                    Y: =10
-                    ZIndex: =4
-
-                btn_nav_overlay_3 As button:
-                    BorderStyle: =BorderStyle.None
-                    Color: |-
-                        =//RGBA(255, 255, 255, 1)
-                        ColorValue("#0E0D26")
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =Parent.TemplateHeight
-                    HoverColor: =RGBA(0, 0, 0, 0)
-                    HoverFill: |-
-                        =//ColorFade(ColorValue("#0E0D26"), -20%)
-                        Color.Transparent
-                    OnSelect: |-
-                        =Select(Parent);
-                        Set(navSelected,ThisItem.id);
-                    PressedColor: =RGBA(179, 179, 179, 1)
-                    PressedFill: |-
-                        =//ColorFade(ColorValue("#0E0D26"), -20%)
-                    RadiusTopLeft: =30
-                    RadiusTopRight: =30
-                    Size: =24
-                    Text: =""
-                    Visible: =false
-                    Width: =Parent.TemplateWidth
-                    ZIndex: =5
-
-        Circle1_4 As circle:
-            Fill: =RGBA(168, 0, 0, 1)
-            Height: =70
-            Width: =70
-            X: =285
-            Y: =1024
-            ZIndex: =9
+    icn_back_1 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =45
+        Icon: =Icon.BackArrow
+        OnSelect: |-
+            =//Back(Fade)
+            Navigate('Main Screen',Fade)
+        Width: =45
+        X: =22
+        Y: =24
+        ZIndex: =14
 

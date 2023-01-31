@@ -1,28 +1,19 @@
 "'Add Sales Caller Screen' As screen":
-    Fill: =RGBA(14, 13, 38, 1)
-
-    icn_back As icon.BackArrow:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =40
-        Icon: =Icon.BackArrow
-        OnSelect: =Back(Fade)
-        Width: =40
-        X: =584
-        Y: =12
-        ZIndex: =1
+    Fill: =RGBA(17, 28, 78, 1)
 
     ctn_AddNewSales As groupContainer.manualLayoutContainer:
-        Height: =1084
+        Height: =1127
         Width: =640
-        Y: =52
-        ZIndex: =7
+        Y: =8
+        ZIndex: =1
 
         background_1 As button:
             BorderStyle: =BorderStyle.None
+            DisabledBorderColor: =RGBA(255, 255, 255, 1)
             DisabledColor: =RGBA(176, 26, 26, 1)
-            DisabledFill: =RGBA(246, 245, 245, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
             DisplayMode: =DisplayMode.Disabled
-            Height: =1007
+            Height: =1050
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =50
@@ -35,12 +26,13 @@
 
         SalesCallForm As form:
             DataSource: ='Sales Calls'
-            Height: =810
+            Height: =685
             Item: |-
                 =//AccContext
                 gal_activity.Selected
-            Width: =Parent.Width
-            Y: =120
+            Width: =605
+            X: =35
+            Y: =166
             ZIndex: =4
 
             "'Subject _DataCard1' As typedDataCard.textualEditCard":
@@ -54,31 +46,35 @@
                 MaxLength: =DataSourceInfo([@'Sales Calls'], DataSourceInfo.MaxLength, "a1a_subject")
                 Required: =false
                 Update: =DataCardValue3.Text
-                Width: =640
+                Width: =605
                 X: =0
                 Y: =1
                 ZIndex: =1
 
                 DataCardKey3 As label:
                     AutoHeight: =true
-                    Size: =19
+                    Color: =RGBA(116, 116, 116, 1)
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    PaddingLeft: =0
+                    Size: =15
                     Text: =Parent.DisplayName
-                    Width: =Parent.Width - 60
+                    Width: =520
                     Wrap: =false
-                    X: =30
+                    X: =50
                     Y: =10
                     ZIndex: =1
 
                 DataCardValue3 As text:
-                    BorderColor: |-
-                        =//If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        ColorValue("#A80000")
-                    BorderThickness: =1
+                    BorderColor: =
+                    BorderThickness: =0
                     Default: |-
                         =//Parent.Default
                         If(varSetEdit = "edit",AccContext.'Subject ',Parent.Default)
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
+                    Fill: =RGBA(240, 240, 240, 1)
+                    Font: =Font.Lato
                     Height: =50
                     MaxLength: =Parent.MaxLength
                     PaddingLeft: =5
@@ -86,10 +82,10 @@
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
-                    Size: =16
+                    Size: =15
                     Tooltip: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    X: =30
+                    Width: =467
+                    X: =50
                     Y: =DataCardKey3.Y + DataCardKey3.Height + 5
                     ZIndex: =2
 
@@ -130,26 +126,28 @@
                 Height: =133
                 Required: =false
                 Update: =DateValue1.SelectedDate + Time(Value(HourValue1.Selected.Value), Value(MinuteValue1.Selected.Value), 0)
-                Width: =640
+                Width: =605
                 X: =0
                 Y: =2
                 ZIndex: =1
 
                 DataCardKey4 As label:
                     AutoHeight: =true
-                    Size: =19
+                    Color: =RGBA(116, 116, 116, 1)
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    PaddingLeft: =0
+                    Size: =15
                     Text: =Parent.DisplayName
-                    Width: =Parent.Width - 60
+                    Width: =521
                     Wrap: =false
-                    X: =30
+                    X: =50
                     Y: =10
                     ZIndex: =1
 
                 DateValue1 As datepicker:
-                    BorderColor: |-
-                        =//If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        ColorValue("#A80000")
-                    BorderThickness: =1
+                    BorderColor: =
+                    BorderThickness: =0
                     DefaultDate: |-
                         =//Parent.Default
                         //Text(Today(),"[$-en-US]dd/mm/yyyy")
@@ -158,6 +156,8 @@
                     DisabledFill: |
                         =//RGBA(244, 244, 244, 1)
                     EndYear: =Year(Today())+100
+                    Fill: =RGBA(240, 240, 240, 1)
+                    Font: =Font.Lato
                     Format: |-
                         =//ShortDate
                         " dd/mm/yyyy"
@@ -165,15 +165,15 @@
                     IconBackground: =//RGBA(56, 96, 178, 1)
                     IconFill: |-
                         =//RGBA(255, 255, 255, 1)
-                        ColorValue("#A80000")
+                        ColorValue("#747474")
                     IsEditable: =true
                     PaddingBottom: =0
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                    Size: =16
+                    Size: =15
                     StartYear: =1899
                     Tooltip: =Parent.DisplayName
-                    Width: =580
-                    X: =30
+                    Width: =468
+                    X: =50
                     Y: =DataCardKey4.Y + DataCardKey4.Height + 5
                     ZIndex: =2
 
@@ -268,7 +268,7 @@
                 Height: =109
                 Required: =false
                 Update: =drp_Customer.Selected
-                Width: =640
+                Width: =605
                 X: =0
                 Y: =3
                 ZIndex: =1
@@ -289,17 +289,21 @@
                     Size: =16
                     Visible: =false
                     Width: =575
-                    X: =30
+                    X: =50
                     Y: =DataCardKey3_1.Y + DataCardKey3_1.Height + 5
                     ZIndex: =1
 
                 DataCardKey3_1 As label:
                     AutoHeight: =true
-                    Size: =19
+                    Color: =RGBA(116, 116, 116, 1)
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    PaddingLeft: =0
+                    Size: =15
                     Text: =Parent.DisplayName
-                    Width: =Parent.Width - 60
+                    Width: =518
                     Wrap: =false
-                    X: =30
+                    X: =50
                     ZIndex: =3
 
             Notes_DataCard1 As typedDataCard.textualMultiLineEditCard:
@@ -312,25 +316,29 @@
                 Height: =201
                 Required: =false
                 Update: =DataCardValue4.Text
-                Width: =640
+                Width: =605
                 X: =0
                 Y: =4
                 ZIndex: =1
 
                 DataCardKey5 As label:
                     AutoHeight: =true
+                    Color: =RGBA(116, 116, 116, 1)
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
                     Height: =48
-                    Size: =19
+                    PaddingLeft: =0
+                    Size: =15
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
-                    X: =30
+                    X: =50
                     Y: =10
                     ZIndex: =1
 
                 DataCardValue4 As text:
-                    BorderColor: =RGBA(168, 0, 0, 1)
-                    BorderThickness: =1
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderThickness: =0
                     Default: |-
                         =//Parent.Default
                         //drp_Customer.Selected.'Full Name'
@@ -338,7 +346,8 @@
                         If(varSetEdit = "edit",PlainText(AccContext.'Subject '),PlainText(Parent.Default))
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
-                    Font: =Font.'Segoe UI'
+                    Fill: =RGBA(240, 240, 240, 1)
+                    Font: =Font.Lato
                     Height: =240
                     Mode: =TextMode.MultiLine
                     PaddingLeft: =5
@@ -346,10 +355,10 @@
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
-                    Size: =18
+                    Size: =15
                     Tooltip: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    X: =30
+                    Width: =469
+                    X: =50
                     Y: =DataCardKey5.Y + DataCardKey5.Height + 5
                     ZIndex: =2
 
@@ -392,13 +401,14 @@
                 Required: =true
                 Update: =DataCardValue1.Text
                 Visible: =false
-                Width: =640
+                Width: =605
                 X: =0
                 Y: =0
                 ZIndex: =5
 
                 DataCardKey1 As label:
                     AutoHeight: =true
+                    PaddingLeft: =0
                     Size: =19
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
@@ -409,11 +419,13 @@
 
                 DataCardValue1 As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    BorderThickness: =0
                     Default: |-
                         =//Parent.Default
                         $"{Customer} - Sales Call"
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
+                    Font: =Font.Lato
                     Height: =50
                     MaxLength: =Parent.MaxLength
                     PaddingLeft: =5
@@ -421,7 +433,7 @@
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
-                    Size: =16
+                    Size: =12
                     Tooltip: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     X: =30
@@ -457,75 +469,44 @@
 
         lbl_NewSalesCall As label:
             Align: =Align.Center
-            AutoHeight: =true
             Color: =RGBA(255, 255, 255, 1)
-            Font: =Font.'Segoe UI'
+            Font: =Font.Lato
             FontWeight: =FontWeight.Bold
-            Height: =75
-            Size: =26
+            Height: =51
+            Size: =24
             Text: ="New Sales Call "
             Width: =640
+            Y: =11
             ZIndex: =5
 
-        grp_AddSales_1 As group:
-            Height: =5
-            Width: =5
-            X: =15
-            Y: =-865
-            ZIndex: =8
-
-            btn_Add_1 As button:
-                BorderStyle: =BorderStyle.None
-                Fill: =RGBA(168, 0, 0, 1)
-                Height: =69
-                HoverFill: =ColorFade(Self.Fill, -20%)
-                OnSelect: |-
-                    =//Navigate('Add Sales Caller Screen',Fade);
-                    
-                    //create new sales call
-                    SubmitForm(SalesCallForm);
-                    NewForm(SalesCallForm);
-                    Refresh('Sales Calls');
-                    Navigate('View Account Screen',Fade);
-                    //Set(DesiredOutput,'PowerApp->Compose'.Run(JSON(First(AudioCollection),JSONFormat.IncludeBinaryData)));
-                PressedColor: =White
-                PressedFill: =ColorFade(Self.Fill, -20%)
-                RadiusBottomLeft: =15
-                RadiusBottomRight: =15
-                RadiusTopLeft: =15
-                RadiusTopRight: =15
-                Size: =25
-                Text: =If(Lower(varSetEdit) = "edit","UPDATE","SAVE")
-                Width: =609
-                X: =16
-                Y: =997
-                ZIndex: =6
-
-            icn_Add_1 As icon.Add:
-                Color: =RGBA(255, 255, 255, 1)
-                Height: =48
-                Icon: =Icon.Add
-                OnSelect: |-
-                    =//Navigate('Add Sales Caller Screen',Fade);
-                    
-                    //create new sales call
-                    SubmitForm(SalesCallForm);
-                    NewForm(SalesCallForm);
-                    Refresh('Sales Calls');
-                    Navigate('View Account Screen',Fade);
-                    
-                    //Set(DesiredOutput,'PowerApp->Compose'.Run(JSON(First(AudioCollection),JSONFormat.IncludeBinaryData)));
-                Width: =55
-                X: =516
-                Y: =1010
-                ZIndex: =7
-
-    Image2_1 As image:
-        Height: =91
-        Image: ='DON CRM DEMO'
-        Width: =272
-        Y: =1
-        ZIndex: =8
+        btn_Add_1 As button:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(168, 0, 0, 1)
+            Font: =Font.Lato
+            Height: =69
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: |-
+                =//Navigate('Add Sales Caller Screen',Fade);
+                
+                //create new sales call
+                SubmitForm(SalesCallForm);
+                NewForm(SalesCallForm);
+                Refresh('Sales Calls');
+                Navigate('View Account Screen',Fade);
+                //Set(DesiredOutput,'PowerApp->Compose'.Run(JSON(First(AudioCollection),JSONFormat.IncludeBinaryData)));
+            PaddingRight: =30
+            PressedColor: =White
+            PressedFill: =ColorFade(Self.Fill, -20%)
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Size: =20
+            Text: =If(Lower(varSetEdit) = "edit","Update","Save")
+            Width: =455
+            X: =92
+            Y: =951
+            ZIndex: =6
 
     TextOutput As label:
         Height: =70
@@ -534,7 +515,7 @@
         Visible: =false
         Width: =560
         Y: =138
-        ZIndex: =9
+        ZIndex: =2
 
     AudioJSON As label:
         Height: =70
@@ -543,21 +524,31 @@
         Visible: =false
         Width: =560
         Y: =111
-        ZIndex: =10
+        ZIndex: =3
 
     lbl_placeholderCustomer As label:
-        BorderColor: =RGBA(168, 0, 0, 1)
-        BorderThickness: =1
-        DisabledBorderColor: =RGBA(168, 0, 0, 1)
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(240, 240, 240, 1)
         DisplayMode: =DisplayMode.Disabled
-        Fill: =RGBA(168, 0, 0, 0)
+        Fill: =RGBA(240, 240, 240, 1)
         Font: =Font.Lato
-        Height: =56
+        Height: =50
         PaddingLeft: =10
-        Size: =16
+        Size: =15
         Text: =drp_Customer.Selected.'Account Name'
-        Width: =581
-        X: =30
-        Y: =469
-        ZIndex: =11
+        Width: =466
+        X: =87
+        Y: =456
+        ZIndex: =4
+
+    icn_back As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =45
+        Icon: =Icon.BackArrow
+        OnSelect: =Back(Fade)
+        Width: =45
+        X: =22
+        Y: =24
+        ZIndex: =5
 
