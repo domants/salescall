@@ -34,6 +34,7 @@
       "a1a_metcashstorecode": "Metcash Store Code ",
       "a1a_product_Account_account": "Products (a1a_product_Account_account)",
       "a1a_tonnage": "Tonnage",
+      "a1a_tonnage1": "Tonnage1",
       "a1a_winnotes": "Win notes",
       "a1a_ytdsales": "YTD Sales",
       "account_actioncard": "Action Cards",
@@ -415,7 +416,8 @@
       "100000001": "Ham",
       "100000002": "Bacon",
       "100000003": "Salami",
-      "100000004": "Pizza"
+      "100000004": "Pizza",
+      "100000005": "Ham, Salami"
     },
     "OptionSetIsBooleanValued": false,
     "OptionSetIsGlobal": false,
