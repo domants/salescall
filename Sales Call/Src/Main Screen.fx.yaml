@@ -67,8 +67,24 @@
                         "name",
                         "primarycontact"
                     ),
+                    
                     //For Distributor and End Users
+                    Blank(),
                     Search(
+                        Filter(
+                            AddColumns(
+                                Accounts,
+                                "primarycontact",
+                                'Primary Contact'.'Full Name'
+                            ),
+                            Or('Account Type' = 'Account Type (Accounts)'.'End User','Account Type' = 'Account Type (Accounts)'.Distributor)
+                        ),
+                        txt_SearchInput.Text,
+                        "name",
+                        "primarycontact"
+                    ),
+                
+                        Search(
                         Filter(
                             AddColumns(
                                 Accounts,
@@ -115,7 +131,7 @@
                 Size: =18
                 Text: =ThisItem.'Account Name'
                 VerticalAlign: =VerticalAlign.Top
-                Width: =Parent.TemplateWidth - img_AccountImage.Width - 104
+                Width: =382
                 X: =163
                 Y: =13
                 ZIndex: =2
