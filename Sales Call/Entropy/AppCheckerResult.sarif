@@ -1274,6 +1274,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.handleEditAdd"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.handleEditAdd",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "handleEditAdd",
+                "module": "Add Sales Caller Screen",
+                "type": "'Add Sales Caller Screen'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.SalesCallForm.Item"
                 }
               ],
