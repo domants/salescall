@@ -476,6 +476,15 @@
             Y: =1014
             ZIndex: =9
 
+    Label3 As label:
+        Height: =70
+        Size: =21
+        Text: ="test"
+        Width: =560
+        X: =40
+        Y: =114
+        ZIndex: =13
+
     grp_FilterButton As group:
         Height: =5
         Width: =5
