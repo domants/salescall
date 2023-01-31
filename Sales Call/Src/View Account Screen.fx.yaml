@@ -592,11 +592,22 @@
         Y: =64
         ZIndex: =12
 
+    icn_back_1 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =45
+        Icon: =Icon.BackArrow
+        OnSelect: =Back(Fade)
+        Width: =45
+        X: =22
+        Y: =24
+        ZIndex: =13
+
     Button1 As button:
         BorderColor: =RGBA(168, 0, 0, 1)
         BorderThickness: =5
         Fill: =RGBA(168, 0, 0, 1)
         Font: =Font.Lato
+        Height: =55
         HoverColor: =RGBA(168, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         OnSelect: |-
@@ -606,17 +617,7 @@
         Text: ="Save"
         Width: =168
         X: =236
-        Y: =1039
-        ZIndex: =13
-
-    icn_back_1 As icon.BackArrow:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =45
-        Icon: =Icon.BackArrow
-        OnSelect: =Back(Fade)
-        Width: =45
-        X: =22
-        Y: =24
+        Y: =1030
         ZIndex: =13
 
     grp_BottomNav_2 As group:

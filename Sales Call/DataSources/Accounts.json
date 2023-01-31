@@ -415,7 +415,8 @@
       "100000001": "Ham",
       "100000002": "Bacon",
       "100000003": "Salami",
-      "100000004": "Pizza"
+      "100000004": "Pizza",
+      "100000005": "Ham, Salami"
     },
     "OptionSetIsBooleanValued": false,
     "OptionSetIsGlobal": false,
