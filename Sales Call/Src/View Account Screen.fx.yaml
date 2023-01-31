@@ -602,6 +602,23 @@
         Y: =24
         ZIndex: =13
 
+    Button1 As button:
+        BorderColor: =RGBA(168, 0, 0, 1)
+        BorderThickness: =5
+        Fill: =RGBA(168, 0, 0, 1)
+        Font: =Font.Lato
+        HoverColor: =RGBA(168, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: |-
+            =Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name'});
+            
+            NewForm(SalesCallForm);
+        Text: ="Save"
+        Width: =168
+        X: =236
+        Y: =1039
+        ZIndex: =13
+
     grp_BottomNav_2 As group:
         Height: =5
         Width: =5
@@ -705,6 +722,7 @@
         Circle1_4 As circle:
             Fill: =RGBA(168, 0, 0, 1)
             Height: =70
+            Visible: =false
             Width: =70
             X: =285
             Y: =1024
@@ -718,6 +736,7 @@
                 =Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name'});
                 
                 NewForm(SalesCallForm);
+            Visible: =false
             Width: =50
             X: =295
             Y: =1034
