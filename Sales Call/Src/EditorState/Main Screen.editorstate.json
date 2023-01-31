@@ -3702,7 +3702,14 @@
         "TemplatePadding",
         "Layout",
         "Transition",
-        "LoadingSpinner",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "LoadingSpinner.None",
+          "InvariantPropertyName": "LoadingSpinner",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "LoadingSpinnerColor",
         "DisplayMode",
         "BorderColor",
@@ -3754,6 +3761,14 @@
           "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "",
           "InvariantPropertyName": "ShowScrollbar",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "DelayItemLoading",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         }
@@ -3900,6 +3915,11 @@
         {
           "Category": "Design",
           "PropertyName": "ShowScrollbar",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "DelayItemLoading",
           "RuleProviderType": "Unknown"
         }
       ],

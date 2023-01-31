@@ -25,6 +25,7 @@
             ZIndex: =1
 
         "gal_Accounts As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            DelayItemLoading: =true
             Height: =If(_showFilter=true, 785, 850)
             Items: |
                 =/*Switch(drp_FilterView.Selected.Value,"Distributor",
@@ -99,6 +100,7 @@
                     )
                 )
             Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
             TemplatePadding: =0
             TemplateSize: =If(_showFilter=true, 130, 144)
