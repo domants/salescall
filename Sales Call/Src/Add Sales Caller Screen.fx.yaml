@@ -35,7 +35,6 @@
 
         SalesCallForm As form:
             DataSource: ='Sales Calls'
-            DefaultMode: =FormMode.New
             Height: =789
             Item: |-
                 =//AccContext
@@ -43,7 +42,7 @@
                     varSetEdit = "add",
                     Defaults('Sales Calls'),
                     varSetEdit = "edit",
-                    gal_activity.Selected
+                    AccContext //gal_activity.Selected
                 )
             Width: =Parent.Width
             Y: =120
