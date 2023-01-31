@@ -77,7 +77,7 @@
                                 "primarycontact",
                                 'Primary Contact'.'Full Name'
                             ),
-                            Or('Account Type' = 'Account Type (Accounts)'.'End User','Account Type' = 'Account Type (Accounts)'.Distributor,Status = 'Status (Accounts)'.Active)
+                            Or('Account Type' = 'Account Type (Accounts)'.'End User','Account Type' = 'Account Type (Accounts)'.Distributor)
                         ),
                         txt_SearchInput.Text,
                         "name",
@@ -91,7 +91,7 @@
                                 "primarycontact",
                                 'Primary Contact'.'Full Name'
                             ),
-                            Or('Account Type' = 'Account Type (Accounts)'.'End User','Account Type' = 'Account Type (Accounts)'.Distributor,Status = 'Status (Accounts)'.Active)
+                            Or('Account Type' = 'Account Type (Accounts)'.'End User','Account Type' = 'Account Type (Accounts)'.Distributor)
                         ),
                         txt_SearchInput.Text,
                         "name",
