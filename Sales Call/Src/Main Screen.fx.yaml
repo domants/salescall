@@ -573,3 +573,12 @@
             Y: =1
             ZIndex: =5
 
+    Label4 As label:
+        Height: =70
+        Size: =21
+        Text: ="excel"
+        Width: =560
+        X: =40
+        Y: =131
+        ZIndex: =14
+
