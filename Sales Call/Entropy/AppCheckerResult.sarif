@@ -1214,6 +1214,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'View Account Screen'.icn_add.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'View Account Screen'.icn_add.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "View Account Screen",
+                "type": "'View Account Screen'.icn_add"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'View Account Screen'.icn_add.TabIndex"
                 }
               ],
@@ -1244,19 +1274,109 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'View Account Screen'.icn_add.AccessibleLabel"
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.Form1.Date_DataCard2.DateValue2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'View Account Screen'.icn_add.AccessibleLabel",
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.Form1.Date_DataCard2.DateValue2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "View Account Screen",
-                "type": "'View Account Screen'.icn_add"
+                "module": "Add Sales Caller Screen",
+                "type": "'Add Sales Caller Screen'.ctn_AddNewSales.Form1.Date_DataCard2.DateValue2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.Form1.Date_DataCard2.HourValue2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.Form1.Date_DataCard2.HourValue2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Add Sales Caller Screen",
+                "type": "'Add Sales Caller Screen'.ctn_AddNewSales.Form1.Date_DataCard2.HourValue2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.Form1.Date_DataCard2.MinuteValue2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.Form1.Date_DataCard2.MinuteValue2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Add Sales Caller Screen",
+                "type": "'Add Sales Caller Screen'.ctn_AddNewSales.Form1.Date_DataCard2.MinuteValue2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.Form1.'Subject _DataCard2'.DataCardValue2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.Form1.'Subject _DataCard2'.DataCardValue2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Add Sales Caller Screen",
+                "type": "'Add Sales Caller Screen'.ctn_AddNewSales.Form1.'Subject _DataCard2'.DataCardValue2"
               }
             }
           ],
@@ -1334,19 +1454,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.SalesCallForm.Item"
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.Form1.Item"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.SalesCallForm.Item",
+                  "fullyQualifiedName": "'Add Sales Caller Screen'.ctn_AddNewSales.Form1.Item",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Item",
                 "module": "Add Sales Caller Screen",
-                "type": "'Add Sales Caller Screen'.ctn_AddNewSales.SalesCallForm"
+                "type": "'Add Sales Caller Screen'.ctn_AddNewSales.Form1"
               }
             }
           ],

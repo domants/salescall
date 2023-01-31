@@ -212,7 +212,7 @@
             RadiusTopLeft: =15
             RadiusTopRight: =15
             Size: =20
-            Width: =407
+            Width: =383
             X: =44
             Y: =100
             ZIndex: =4
@@ -233,6 +233,7 @@
         icn_search As icon.Search:
             Height: =32
             Icon: =Icon.Search
+            Visible: =false
             Width: =36
             X: =581
             Y: =79
@@ -489,17 +490,6 @@
             Y: =1014
             ZIndex: =9
 
-    icn_Filter_1 As icon.FilterFlatFilled:
-        Color: =RGBA(116, 116, 116, 1)
-        Height: =29
-        Icon: =Icon.Search
-        OnSelect: |-
-            =UpdateContext({_showFilter:true})
-        Width: =29
-        X: =56
-        Y: =210
-        ZIndex: =13
-
     grp_FilterButton As group:
         Height: =5
         Width: =5
@@ -508,30 +498,31 @@
         ZIndex: =13
 
         btn_Filter As button:
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =1
+            BorderColor: =RGBA(240, 240, 240, 1)
+            BorderThickness: =3
             Color: =RGBA(128, 128, 128, 1)
+            DisabledColor: =RGBA(128, 128, 128, 1)
             DisabledFill: =RGBA(240, 240, 240, 1)
             Fill: =RGBA(240, 240, 240, 1)
             Font: =Font.Lato
             FontWeight: =FontWeight.Normal
             Height: =55
-            HoverFill: |-
-                =ColorFade(ColorValue("#CC2325"), -20%)
+            HoverBorderColor: =RGBA(128, 128, 128, 1)
+            HoverColor: =RGBA(116, 116, 116, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
             OnSelect: |-
                 =UpdateContext({_showFilter:true})
             PaddingRight: =25
-            PressedColor: =White
-            PressedFill: |-
-                =ColorFade(ColorValue("#CC2325"), -20%)
+            PressedColor: =RGBA(128, 128, 128, 1)
+            PressedFill: =
             RadiusBottomLeft: =15
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
             Size: =20
             Text: ="Filter"
-            Width: =136
-            X: =467
+            Width: =153
+            X: =438
             Y: =196
             ZIndex: =10
 
@@ -603,6 +594,27 @@
         Text: ="Accounts"
         Width: =542
         X: =49
-        Y: =119
+        Y: =128
         ZIndex: =14
+
+    Image5 As image:
+        Height: =37
+        Image: ='3031293 (2)'
+        OnSelect: |-
+            =UpdateContext({_showFilter:true})
+        Width: =32
+        X: =53
+        Y: =205
+        ZIndex: =15
+
+    Icon2 As icon.ArrowDown:
+        Color: =RGBA(128, 128, 128, 1)
+        Height: =20
+        Icon: =If(_showFilter = true, Icon.ChevronUp, Icon.ChevronDown)
+        OnSelect: |-
+            =UpdateContext({_showFilter:!_showFilter})
+        Width: =20
+        X: =553
+        Y: =215
+        ZIndex: =16
 
