@@ -438,6 +438,7 @@
                 OnSelect: |-
                     =Select( Parent );Navigate('Add Sales Caller Screen',Fade,{handleEditAdd:"Edit",AccContext:ThisItem});
                     Set(varSetEdit, "Edit");
+                    EditForm(SalesCallForm);
                 PressedFill: |-
                     =//Self.Color
                     Transparent
@@ -590,9 +591,9 @@
         Height: =50
         Icon: =Icon.Add
         OnSelect: |-
-            =Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name',handleEditAdd:"Add"});
+            =NewForm(SalesCallForm);
+            Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name',handleEditAdd:"Add"});
             Set(varSetEdit, "Add");
-            NewForm(SalesCallForm);
         Width: =50
         X: =295
         Y: =1034
