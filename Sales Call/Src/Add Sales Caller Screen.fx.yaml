@@ -152,7 +152,7 @@
                         =//Parent.Default
                         //Text(Today(),"[$-en-US]dd/mm/yyyy")
                         //
-                        If(varSetEdit = "edit",AccContext.'Subject ',Today())
+                        If(varSetEdit = "edit",Today(),Today())
                     DisabledFill: |
                         =//RGBA(244, 244, 244, 1)
                     EndYear: =Year(Today())+100
@@ -350,7 +350,7 @@
                     Font: =Font.Lato
                     Height: =240
                     Mode: =TextMode.MultiLine
-                    PaddingLeft: =25
+                    PaddingLeft: =5
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
@@ -478,6 +478,15 @@
             Width: =640
             Y: =11
             ZIndex: =5
+
+        Button2 As button:
+            Height: =50
+            Size: =24
+            Text: =If(varSetEdit = "edit","SAVE","UPDATE")
+            Width: =466
+            X: =87
+            Y: =926
+            ZIndex: =6
 
     TextOutput As label:
         Height: =70

@@ -730,7 +730,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btn_Add",
-      "ParentIndex": 18,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1578,7 +1578,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Circle1_3",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1908,7 +1908,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "gal_activity",
-      "ParentIndex": 15,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4971,7 +4971,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgActivity_1",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5243,7 +5243,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1",
-      "ParentIndex": 13,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5575,7 +5575,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lbl_notes",
-      "ParentIndex": 16,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5898,7 +5898,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblCreatedOn_1",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6214,7 +6214,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblCustomer",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6495,7 +6495,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblGetActivityLabel_1",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7107,7 +7107,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblNotes",
-      "ParentIndex": 3,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9663,7 +9663,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSubject_1",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9978,7 +9978,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "noRecordFoundTimeline",
-      "ParentIndex": 17,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10840,7 +10840,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txtTotalActivity_1",
-      "ParentIndex": 14,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

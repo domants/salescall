@@ -427,7 +427,7 @@
                 HoverFill: =ColorFade(RGBA(56, 96, 178, 0), -20%)
                 OnSelect: |-
                     =Select( Parent );Navigate('Add Sales Caller Screen',Fade,{handleEditAdd:"Edit",AccContext:ThisItem});
-                    Set(varSetEdit, "Edit");
+                    Set(varSetEdit, "edit");
                     EditForm(SalesCallForm);
                 PressedFill: |-
                     =//Self.Color
@@ -586,7 +586,7 @@
         OnSelect: |-
             =NewForm(SalesCallForm);
             Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name',handleEditAdd:"Add"});
-            Set(varSetEdit, "Add");
+            Set(varSetEdit, "add");
         PressedColor: =White
         Width: =52
         X: =517
