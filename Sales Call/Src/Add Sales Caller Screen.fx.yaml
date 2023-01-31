@@ -37,6 +37,13 @@
             DataSource: ='Sales Calls'
             DefaultMode: =FormMode.New
             Height: =789
+            Item: |-
+                =//AccContext
+                If(
+                    Lower(lbl_handleAddEdit.Text) = "edit",
+                    AccContext,
+                    Defaults('Sales Calls')
+                )
             Width: =Parent.Width
             Y: =120
             ZIndex: =4
