@@ -393,7 +393,7 @@
                 Text: |-
                     =//AsType(ThisItem.Regarding,Contacts).'Full Name'
                     //PlainText(ThisItem.Notes)
-                    Coalesce(PlainText(ThisItem.Notes),"")
+                    Coalesce(PlainText(ThisItem.Notes),"No Notes.")
                 VerticalAlign: =VerticalAlign.Top
                 Width: =466
                 X: =140
