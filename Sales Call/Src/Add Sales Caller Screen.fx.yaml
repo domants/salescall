@@ -479,35 +479,6 @@
             Y: =11
             ZIndex: =5
 
-        btn_Add_1 As button:
-            BorderStyle: =BorderStyle.None
-            Fill: =RGBA(168, 0, 0, 1)
-            Font: =Font.Lato
-            Height: =69
-            HoverFill: =ColorFade(Self.Fill, -20%)
-            OnSelect: |-
-                =//Navigate('Add Sales Caller Screen',Fade);
-                
-                //create new sales call
-                SubmitForm(SalesCallForm);
-                NewForm(SalesCallForm);
-                Refresh('Sales Calls');
-                Navigate('View Account Screen',Fade);
-                //Set(DesiredOutput,'PowerApp->Compose'.Run(JSON(First(AudioCollection),JSONFormat.IncludeBinaryData)));
-            PaddingRight: =30
-            PressedColor: =White
-            PressedFill: =ColorFade(Self.Fill, -20%)
-            RadiusBottomLeft: =25
-            RadiusBottomRight: =25
-            RadiusTopLeft: =25
-            RadiusTopRight: =25
-            Size: =20
-            Text: =If(Lower(varSetEdit) = "edit","Update","Save")
-            Width: =455
-            X: =92
-            Y: =951
-            ZIndex: =6
-
     TextOutput As label:
         Height: =70
         Size: =21
