@@ -123,7 +123,6 @@
     "lbl_AccType": 95,
     "lbl_filterByText": 71,
     "lbl_filterTitle": 75,
-    "lbl_handleAddEdit": 42,
     "lbl_NavTitle": 8,
     "lbl_NewSalesCall": 13,
     "lbl_NoAccount": 86,
@@ -174,7 +173,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/31/2023 02:43:31",
+  "HeaderLastSavedDateTimeUTC": "01/31/2023 02:44:41",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "ccc6254a-0ffb-490a-b268-4fb11ed2d314": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/211d188e802947ffbd782d31cd7bf50f-8602e95c2c94fd03\""
@@ -512,7 +511,6 @@
     "lbl_AccType": {},
     "lbl_filterByText": {},
     "lbl_filterTitle": {},
-    "lbl_handleAddEdit": {},
     "lbl_NavTitle": {},
     "lbl_NewSalesCall": {},
     "lbl_NoAccount": {},
@@ -682,7 +680,6 @@
     "lbl_AccType": 26,
     "lbl_filterByText": 4,
     "lbl_filterTitle": 8,
-    "lbl_handleAddEdit": 133,
     "lbl_NavTitle": 161,
     "lbl_NewSalesCall": 103,
     "lbl_NoAccount": 17,

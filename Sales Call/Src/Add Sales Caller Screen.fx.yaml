@@ -467,15 +467,6 @@
             Width: =640
             ZIndex: =5
 
-        lbl_handleAddEdit As label:
-            Height: =78
-            Size: =21
-            Text: =Lower(varSetEdit)
-            Width: =191
-            X: =449
-            Y: =837
-            ZIndex: =8
-
         grp_AddSales_1 As group:
             Height: =5
             Width: =5
@@ -504,7 +495,7 @@
                 RadiusTopLeft: =15
                 RadiusTopRight: =15
                 Size: =25
-                Text: =If(Lower(lbl_handleAddEdit.Text) = "edit","UPDATE","SAVE")
+                Text: =If(Lower(varSetEdit) = "edit","UPDATE","SAVE")
                 Width: =609
                 X: =16
                 Y: =997
