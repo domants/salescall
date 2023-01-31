@@ -95,9 +95,9 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "3ccf729c-921a-46f5-a73d-0000029ee5d5",
-    "Id": "8f173368-e2a6-4787-ae1e-db2b2f61ff6e",
+    "Id": "74fc0457-3d48-409f-b4cd-ebb78e328598",
     "InstrumentationKey": "",
-    "Name": "Sales Calls",
+    "Name": "Sales+Calls.msapp",
     "OriginatingVersion": "1.326"
   },
   "PublishInfo": {
