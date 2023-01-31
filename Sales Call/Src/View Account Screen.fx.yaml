@@ -592,16 +592,6 @@
         Y: =64
         ZIndex: =12
 
-    icn_back_1 As icon.BackArrow:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =45
-        Icon: =Icon.BackArrow
-        OnSelect: =Back(Fade)
-        Width: =45
-        X: =22
-        Y: =24
-        ZIndex: =13
-
     Button1 As button:
         BorderColor: =RGBA(168, 0, 0, 1)
         BorderThickness: =5
@@ -618,6 +608,16 @@
         Width: =168
         X: =236
         Y: =1030
+        ZIndex: =13
+
+    icn_back_1 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =45
+        Icon: =Icon.BackArrow
+        OnSelect: =Back(Fade)
+        Width: =45
+        X: =22
+        Y: =24
         ZIndex: =13
 
     grp_BottomNav_2 As group:
