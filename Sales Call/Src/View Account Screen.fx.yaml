@@ -435,16 +435,8 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =75
                 HoverFill: =ColorFade(RGBA(56, 96, 178, 0), -20%)
-                OnSelect: |
-                    =Select(Parent);
-                    Navigate(
-                        'Add Sales Caller Screen',
-                        Fade,
-                        {
-                            handleEditAdd: "Edit",
-                            AccContext: ThisItem
-                        }
-                    );
+                OnSelect: |-
+                    =Select( Parent );Navigate('Add Sales Caller Screen',Fade,{handleEditAdd:"Edit",AccContext:ThisItem});
                 PressedFill: |-
                     =//Self.Color
                     Transparent

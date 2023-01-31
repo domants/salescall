@@ -40,9 +40,10 @@
             Item: |-
                 =//AccContext
                 If(
+                    Lower(lbl_handleAddEdit.Text) = "add",
+                    Defaults('Sales Calls'),
                     Lower(lbl_handleAddEdit.Text) = "edit",
-                    AccContext,
-                    Defaults('Sales Calls')
+                    gal_activity.Selected
                 )
             Width: =Parent.Width
             Y: =120
@@ -470,7 +471,7 @@
         lbl_handleAddEdit As label:
             Height: =78
             Size: =21
-            Text: =handleEditAdd
+            Text: =Lower(handleEditAdd)
             Width: =191
             X: =448
             Y: =733
