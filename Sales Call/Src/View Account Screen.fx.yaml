@@ -312,7 +312,7 @@
                     Coalesce(ThisItem.'Subject ',"Subject")
                 Width: =522
                 X: =56
-                Y: =15
+                Y: =25
                 ZIndex: =4
 
             imgActivity_1 As image:
