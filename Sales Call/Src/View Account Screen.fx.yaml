@@ -455,28 +455,6 @@
             Y: =917
             ZIndex: =19
 
-        btn_Add As button:
-            BorderColor: =
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =0
-            Fill: =RGBA(168, 0, 0, 1)
-            Height: =75
-            HoverFill: =Self.Fill
-            OnSelect: |-
-                =Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name'});
-                
-                NewForm(SalesCallForm);
-            RadiusBottomLeft: =150
-            RadiusBottomRight: =150
-            RadiusTopLeft: =150
-            RadiusTopRight: =150
-            Size: =24
-            Text: =""
-            Width: =75
-            X: =505
-            Y: =538
-            ZIndex: =20
-
         iconSelectedEmail_1 As image:
             Height: =20
             Image: |-
