@@ -1,14 +1,12 @@
 "'View Account Screen' As screen":
-    Fill: =RGBA(14, 13, 38, 1)
+    Fill: =RGBA(17, 28, 78, 1)
 
     background_3 As button:
         BorderStyle: =BorderStyle.None
         DisabledColor: =RGBA(176, 26, 26, 1)
-        DisabledFill: =RGBA(246, 245, 245, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
         DisplayMode: =DisplayMode.Disabled
-        Height: |-
-            =//Parent.Height
-            1022
+        Height: =1044
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =50
@@ -16,7 +14,7 @@
         Size: =24
         Text: =""
         Width: =Parent.Width
-        Y: =114
+        Y: =92
         ZIndex: =1
 
     containerContent As groupContainer.manualLayoutContainer:
@@ -31,37 +29,15 @@
             Height: =334
             HtmlText: |-
                 ="<div style='margin:5px;width:"&HtmlText1_1.Width-22&"px;height:"&HtmlText1_1.Height-25&"px;background-color:#ffffff;box-shadow:0 3px 6px 1px  #ccc; border-radius:5px'></div>"
+            Visible: =false
             Width: =640
             Y: =221
             ZIndex: =1
 
-        btnHeader As button:
-            Align: =Align.Left
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(14, 13, 38, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            DisplayMode: =DisplayMode.Disabled
-            Fill: =//secondaryColor
-            Font: =Font.'Segoe UI'
-            Height: =25
-            PaddingLeft: =0
-            RadiusBottomLeft: =3
-            RadiusBottomRight: =3
-            RadiusTopLeft: =3
-            RadiusTopRight: =3
-            Size: =12
-            Text: |-
-                ="Customer Details:"
-            Width: =208
-            X: =15
-            Y: =234
-            ZIndex: =3
-
         lblSelectedAccount As label:
             Align: =Align.Center
             AutoHeight: =true
-            FontWeight: =FontWeight.Semibold
+            Font: =Font.'Lato Black'
             Height: =32
             Size: =20
             Text: |-
@@ -69,94 +45,71 @@
                 //"Account Selected"
                 Account.'Account Name'
             Width: =Parent.Width
-            Y: =152
+            Y: =158
             ZIndex: =4
 
         lblSelectedAccountSince As label:
             Align: =Align.Center
             AutoHeight: =true
+            Color: =RGBA(116, 116, 116, 1)
+            Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
             Height: =32
-            Size: =17
+            Size: =11
             Text: |-
                 =Coalesce($"Customer Since: {Text(Account.'Created On',"dd/mm/yyyy")}","Customer Since: 18/12/2022")
                 //"Customer Since"
             Width: =Parent.Width
-            Y: =195
+            Y: =194
             ZIndex: =5
-
-        lblSelectedAccountAddress As label:
-            AutoHeight: =true
-            FontWeight: =FontWeight.Semibold
-            Height: =32
-            Text: |-
-                =//"Address"
-                Coalesce(Account.'Account Name',"Default Account Name")
-            Width: =578
-            X: =62
-            Y: = iconSelectedAddress.Y - 5
-            ZIndex: =6
 
         lblSelectedAccountWebsite As label:
             AutoHeight: =true
-            FontWeight: =FontWeight.Semibold
+            Font: =Font.Lato
             Height: =19
             Text: |-
                 =//"Website"
                 Coalesce(Account.City,"Melbourne")
-            Width: =578
-            X: =62
-            Y: =iconSelectedWebsite.Y - 5
+            Width: =495
+            X: =144
+            Y: =240
             ZIndex: =7
 
         lblSelectedAccountPhone As label:
             AutoHeight: =true
-            FontWeight: =FontWeight.Semibold
+            Font: =Font.Lato
             Height: =39
             Text: |-
                 =//"Phone"
                 Coalesce(Account.'Main Phone',"555-555-6276")
-            Width: =578
-            X: =62
-            Y: =iconSelectedContact.Y - 5
+            Width: =495
+            X: =144
+            Y: =320
             ZIndex: =8
 
         lblSelectedAccountContact As label:
             AutoHeight: =true
-            FontWeight: =FontWeight.Semibold
+            Font: =Font.Lato
             Height: =22
             Text: |-
                 =//"PrimaryContact"
                 //Coalesce(galAccountsValues.Selected.lblPrimaryContact.Text,"Benjamin Smith")
                 
                 Coalesce(Account.'Primary Contact'.'Full Name',"PrimaryContact")
-            Width: =577
-            X: =62
-            Y: =iconSelectedPhone.Y - 5
+            Width: =495
+            X: =144
+            Y: =280
             ZIndex: =9
 
         lblSelectedAccountEmail As label:
             AutoHeight: =true
-            FontWeight: =FontWeight.Semibold
+            Font: =Font.Lato
             Height: =24
             Text: =Account.'Account Type'
-            Width: =578
-            X: =62
-            Y: =iconSelectedEmail.Y - 5
+            Width: =495
+            X: =144
+            Y: =360
             ZIndex: =10
-
-        iconSelectedAddress As image:
-            Height: =20
-            Image: |-
-                ="data:image/svg+xml;utf8, "&EncodeUrl("
-                <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='black' class='bi bi-person-fill' viewBox='0 0 16 16'>
-                  <path d='M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z'/>
-                </svg>
-                ")
-            Width: =20
-            X: =30
-            Y: =277
-            ZIndex: =11
 
         iconSelectedPhone As image:
             Height: =20
@@ -168,7 +121,7 @@
                 </svg>
                 ")
             Width: =20
-            X: =30
+            X: =18
             Y: =iconSelectedWebsite.Height + iconSelectedWebsite.Y + 20
             ZIndex: =12
 
@@ -181,8 +134,8 @@
                 </svg>
                 ")
             Width: =20
-            X: =30
-            Y: =iconSelectedAddress.Height + iconSelectedAddress.Y + 20
+            X: =18
+            Y: =245
             ZIndex: =13
 
         iconSelectedEmail As image:
@@ -195,7 +148,7 @@
                 </svg>
                 ")
             Width: =20
-            X: =30
+            X: =18
             Y: =iconSelectedContact.Height + iconSelectedContact.Y + 20
             ZIndex: =14
 
@@ -208,7 +161,7 @@
                 </svg>
                 ")
             Width: =20
-            X: =30
+            X: =18
             Y: =iconSelectedPhone.Height + iconSelectedPhone.Y + 20
             ZIndex: =15
 
@@ -476,20 +429,20 @@
                 </svg>
                 ")
             Width: =20
-            X: =30
+            X: =18
             Y: =iconSelectedEmail.Height + iconSelectedEmail.Y + 20
             ZIndex: =22
 
         lblSelectedAccountEmail_1 As label:
             AutoHeight: =true
-            FontWeight: =FontWeight.Semibold
+            Font: =Font.Lato
             Height: =32
             Text: |-
                 =//Account.'Account Type'
                 "Unscheduled meeting with Victorian Frozen Foods Distributors Pty Ltd regarding the price hike"
-            Width: =577
-            X: =62
-            Y: =iconSelectedEmail_1.Y - 5
+            Width: =495
+            X: =144
+            Y: =400
             ZIndex: =23
 
         lbl_notes As label:
@@ -611,15 +564,19 @@
         ZIndex: =11
 
     Image4 As image:
-        Height: =90
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =5
+        Fill: =RGBA(17, 28, 78, 1)
+        Height: =120
+        HoverBorderColor: =Self.Fill
         Image: =Account.'Default Image'
-        RadiusBottomLeft: =50
-        RadiusBottomRight: =50
-        RadiusTopLeft: =50
-        RadiusTopRight: =50
-        Width: =90
-        X: =275
-        Y: =64
+        RadiusBottomLeft: =150
+        RadiusBottomRight: =150
+        RadiusTopLeft: =150
+        RadiusTopRight: =150
+        Width: =120
+        X: =260
+        Y: =31
         ZIndex: =12
 
     icn_back_1 As icon.BackArrow:
@@ -670,6 +627,7 @@
                 BorderStyle: =BorderStyle.None
                 DisabledFill: =RGBA(14, 13, 38, 1)
                 DisplayMode: =DisplayMode.Disabled
+                Fill: =RGBA(17, 28, 78, 1)
                 Height: =80
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
