@@ -226,7 +226,7 @@
             Font: =Font.Lato
             FontWeight: =FontWeight.Lighter
             Height: =55
-            HintText: ="Find an Account..."
+            HintText: ="Find an account..."
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
             PaddingLeft: =60
@@ -743,4 +743,14 @@
         X: =416
         Y: =269
         ZIndex: =19
+
+    Icon3 As icon.Add:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =55
+        Icon: =Icon.Cancel
+        Visible: =!IsBlank(txt_SearchInput.Text)
+        Width: =25
+        X: =400
+        Y: =196
+        ZIndex: =20
 
