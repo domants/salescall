@@ -216,6 +216,7 @@
 
         gal_activity As gallery.galleryVertical:
             BorderColor: =RGBA(166, 166, 166, 1)
+            DelayItemLoading: =true
             Height: =499
             Items: |-
                 =//-Account Activity
@@ -426,6 +427,7 @@
                     
                     //refresh the data of sales call
                     Refresh('Sales Calls');
+                Visible: =false
                 Width: =35
                 X: =548
                 Y: =30
@@ -582,7 +584,8 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         Icon: =Icon.Add
         OnSelect: |-
-            =NewForm(SalesCallForm);
+            =ResetForm(SalesCallForm);
+            NewForm(SalesCallForm);
             Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name'});
             Set(varSetEdit, "add");
         PressedColor: =White
