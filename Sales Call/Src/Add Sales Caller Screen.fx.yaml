@@ -280,7 +280,7 @@
                     BorderThickness: =1
                     ChevronBackground: =RGBA(0, 0, 0, 0)
                     ChevronFill: =RGBA(168, 0, 0, 1)
-                    Default: |-
+                    Default: |
                         =//"1"
                         Customer
                     Height: =50
