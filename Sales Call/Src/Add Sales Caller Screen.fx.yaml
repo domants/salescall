@@ -350,7 +350,7 @@
                     Font: =Font.Lato
                     Height: =240
                     Mode: =TextMode.MultiLine
-                    PaddingLeft: =5
+                    PaddingLeft: =10
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
@@ -480,14 +480,22 @@
             ZIndex: =5
 
         btn_SaveOrUpdate As button:
+            BorderColor: =Self.Fill
+            BorderThickness: =3
+            Fill: =RGBA(168, 0, 0, 1)
+            Font: =Font.Lato
             Height: =50
+            HoverBorderColor: =Self.Fill
+            HoverColor: =RGBA(168, 0, 0, 1)
+            HoverFill: =White
             OnSelect: |-
                 =Navigate('View Account Screen',Fade);
                 SubmitForm(SalesCallForm);
                 NewForm(SalesCallForm);
                 Refresh('Sales Calls')
-            Size: =24
-            Text: =If(varSetEdit = "edit","UPDATE","SAVE")
+            PressedColor: =Self.Color
+            PressedFill: =Self.Fill
+            Text: =If(varSetEdit = "edit","Update","Save")
             Width: =466
             X: =87
             Y: =926
