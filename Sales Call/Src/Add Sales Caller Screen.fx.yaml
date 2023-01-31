@@ -540,8 +540,8 @@
         Height: =45
         Icon: =Icon.BackArrow
         OnSelect: |-
-            =Back(Fade);
-            ResetForm(SalesCallForm);
+            =ResetForm(SalesCallForm);
+            Back(Fade);
         Width: =45
         X: =22
         Y: =24

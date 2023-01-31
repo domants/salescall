@@ -579,7 +579,8 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         Icon: =Icon.Add
         OnSelect: |-
-            =NewForm(SalesCallForm);
+            =ResetForm(SalesCallForm);
+            NewForm(SalesCallForm);
             Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name'});
             Set(varSetEdit, "add");
         PressedColor: =White
