@@ -431,6 +431,20 @@
                 Y: =50
                 ZIndex: =10
 
+            btn_overlay As button:
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =75
+                HoverFill: =ColorFade(RGBA(56, 96, 178, 0), -20%)
+                OnSelect: =Select(Parent)
+                PressedFill: |-
+                    =//Self.Color
+                    Transparent
+                Size: =24
+                Text: =""
+                Width: =630
+                Y: =10
+                ZIndex: =11
+
         noRecordFoundTimeline As label:
             Align: =Align.Center
             BorderColor: =RGBA(89, 0, 0, 1)
