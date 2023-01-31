@@ -91,11 +91,14 @@
             ZIndex: =2
 
             img_AccountImage As image:
-                Height: =111.75
                 Image: =Coalesce(ThisItem.'Default Image',default_image_Account)
                 OnSelect: =Select(Parent)
-                Width: =128
+                RadiusBottomLeft: =50
+                RadiusBottomRight: =50
+                RadiusTopLeft: =50
+                RadiusTopRight: =50
                 X: =5
+                Y: =13
                 ZIndex: =1
 
             lbl_AccName As label:
