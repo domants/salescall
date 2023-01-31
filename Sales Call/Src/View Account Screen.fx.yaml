@@ -437,7 +437,7 @@
                 HoverFill: =ColorFade(RGBA(56, 96, 178, 0), -20%)
                 OnSelect: |-
                     =Select(Parent);
-                    UpdateContext({_handleAddEdit:"Edit"})
+                    Navigate('Add Sales Caller Screen',Fade,{handleEditAdd:"Edit"});
                 PressedFill: |-
                     =//Self.Color
                     Transparent
@@ -627,14 +627,14 @@
         HoverColor: =RGBA(168, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         OnSelect: |-
-            =Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name',_handleAddEdit:"Add"});
-            
+            =Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name'});
+            Set(varHandleAddEdit,"Add");
             NewForm(SalesCallForm);
         Text: ="Save"
         Visible: =false
         Width: =168
         X: =236
-        Y: =1030
+        Y: =1081
         ZIndex: =13
 
     grp_BottomNav_2 As group:
@@ -750,7 +750,7 @@
             Height: =50
             Icon: =Icon.Add
             OnSelect: |-
-                =Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name'});
+                =Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name',handleEditAdd:"Add"});
                 
                 NewForm(SalesCallForm);
             Width: =50

@@ -1214,19 +1214,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'View Account Screen'._handleAddEdit"
+                  "fullyQualifiedName": "App.varHandleAddEdit"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'View Account Screen'._handleAddEdit",
+                  "fullyQualifiedName": "App.varHandleAddEdit",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "_handleAddEdit",
-                "module": "View Account Screen",
-                "type": "'View Account Screen'"
+                "member": "varHandleAddEdit",
+                "module": "App",
+                "type": "App"
               }
             }
           ],

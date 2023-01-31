@@ -463,7 +463,7 @@
         lbl_handleAddEdit As label:
             Height: =78
             Size: =21
-            Text: =_handleAddEdit
+            Text: =handleEditAdd
             Width: =191
             X: =448
             Y: =733
