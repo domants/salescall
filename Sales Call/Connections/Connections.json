@@ -1,10 +1,11 @@
 {
   "ccc6254a-0ffb-490a-b268-4fb11ed2d314": {
     "connectionParameters": {
+      "sku": "Enterprise",
       "workFlowCallbackUri": "https://prod-26.australiasoutheast.logic.azure.com:443/workflows/1375699c07ea45b89ce69a379e17163d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=K1D-kRAE32Umu1WeNLm9i9EK4Q3YtPkg6GFsNi033-k",
-      "workflowEndpoint": "/subscriptions/ac07fa44-4742-482d-aa28-c00945932935/resourceGroups/9300daa1b51a4c298356281b8db7aa00-6bd6b0c362cc472184998023a219f9d4/providers/Microsoft.Logic/workflows/211d188e-8029-47ff-bd78-2d31cd7bf50f",
+      "workflowEndpoint": "/subscriptions/ac07fa44-4742-482d-aa28-c00945932935/resourceGroups/9300DAA1B51A4C298356281B8DB7AA00-6BD6B0C362CC472184998023A219F9D4/providers/Microsoft.Logic/workflows/211d188e-8029-47ff-bd78-2d31cd7bf50f",
       "workflowName": "211d188e-8029-47ff-bd78-2d31cd7bf50f",
-      "workflowPath": "/subscriptions/ac07fa44-4742-482d-aa28-c00945932935/resourceGroups/9300daa1b51a4c298356281b8db7aa00-6bd6b0c362cc472184998023a219f9d4/providers/Microsoft.Logic/workflows/211d188e-8029-47ff-bd78-2d31cd7bf50f"
+      "workflowPath": "/subscriptions/ac07fa44-4742-482d-aa28-c00945932935/resourceGroups/9300DAA1B51A4C298356281B8DB7AA00-6BD6B0C362CC472184998023A219F9D4/providers/Microsoft.Logic/workflows/211d188e-8029-47ff-bd78-2d31cd7bf50f"
     },
     "connectionRef": {
       "apiTier": "Standard",
