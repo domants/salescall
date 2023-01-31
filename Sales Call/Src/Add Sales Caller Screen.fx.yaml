@@ -539,7 +539,9 @@
         Color: =RGBA(255, 255, 255, 1)
         Height: =45
         Icon: =Icon.BackArrow
-        OnSelect: =Back(Fade)
+        OnSelect: |-
+            =Back(Fade);
+            ResetForm(SalesCallForm);
         Width: =45
         X: =22
         Y: =24
