@@ -152,9 +152,6 @@
                         Today()
                     DisabledFill: |
                         =//RGBA(244, 244, 244, 1)
-                    DisplayMode: |-
-                        =//Parent.DisplayMode
-                        Disabled
                     EndYear: =Year(Today())+100
                     Format: |-
                         =//ShortDate
@@ -285,6 +282,7 @@
                     Items: =Accounts
                     SelectionFill: =RGBA(168, 0, 0, 1)
                     Size: =16
+                    Visible: =false
                     Width: =575
                     X: =30
                     Y: =DataCardKey3_1.Y + DataCardKey3_1.Height + 5
@@ -538,4 +536,20 @@
         Width: =560
         Y: =111
         ZIndex: =10
+
+    Label3 As label:
+        BorderColor: =RGBA(168, 0, 0, 1)
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(168, 0, 0, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(168, 0, 0, 0)
+        Font: =Font.Lato
+        Height: =56
+        PaddingLeft: =10
+        Size: =16
+        Text: =drp_Customer.Selected.'Account Name'
+        Width: =581
+        X: =30
+        Y: =469
+        ZIndex: =11
 

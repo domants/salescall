@@ -240,7 +240,7 @@
 
         gal_activity As gallery.galleryVertical:
             BorderColor: =RGBA(166, 166, 166, 1)
-            Height: =211
+            Height: =372
             Items: |-
                 =//-Account Activity
                 //Switch(_selActivity,"Tasks",Sort(Filter(Tasks,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Phone Calls",Sort(Filter('Phone Calls',AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Appointments",Sort(Filter(Appointments,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Emails",Sort(Filter('Email Messages',AsType(Regarding,[@Accounts]).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),Sort(Filter(Activities,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Date Created',Descending))
@@ -475,12 +475,13 @@
             Y: =iconSelectedEmail_1.Y - 5
             ZIndex: =23
 
-        lblSelectedAccountEmail_2 As label:
+        lbl_notes As label:
             AutoHeight: =true
             FontWeight: =FontWeight.Semibold
             Size: =16
             Text: |-
                 ="Notes:"
+            Visible: =false
             Width: =145
             X: =18
             Y: =841
@@ -551,6 +552,7 @@
         Height: =91
         Image: ='DON CRM DEMO'
         OnSelect: =Back(Fade)
+        Visible: =false
         Width: =272
         Y: =1
         ZIndex: =5
@@ -567,11 +569,12 @@
         Y: =584
         ZIndex: =7
 
-    TextInput1 As text:
+    txt_Notes As text:
         Default: =Account.Description
         Height: =123
         Mode: =TextMode.MultiLine
         Size: =21
+        Visible: =false
         Width: =596
         X: =22
         Y: =875
@@ -604,6 +607,16 @@
         Width: =168
         X: =236
         Y: =1039
+        ZIndex: =13
+
+    icn_back_1 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =45
+        Icon: =Icon.BackArrow
+        OnSelect: =Back(Fade)
+        Width: =45
+        X: =22
+        Y: =24
         ZIndex: =13
 
     grp_BottomNav_2 As group:
