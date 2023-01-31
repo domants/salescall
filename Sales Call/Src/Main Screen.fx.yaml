@@ -25,7 +25,7 @@
             ZIndex: =1
 
         "gal_Accounts As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-            Height: =704
+            Height: =If(_showFilter=true, 785, 850)
             Items: |
                 =/*Switch(drp_FilterView.Selected.Value,"Distributor",
                     //For Distributors
@@ -36,8 +36,8 @@
                 //Switch function
                 
                 Switch(
-                    rd_FilterSlctd.Selected.id,
-                    2,
+                    _AccountFilter,
+                    1,
                     //For Distributors
                     Search(
                         Filter(
@@ -52,7 +52,7 @@
                         "primarycontact",
                         "name"
                     ),
-                    3,
+                    2,
                 //For End Users
                     Search(
                         Filter(
@@ -85,50 +85,56 @@
             Layout: =Layout.Vertical
             ShowScrollbar: =false
             TemplatePadding: =0
-            TemplateSize: =126
+            TemplateSize: =If(_showFilter=true, 130, 144)
             Visible: =CountRows(gal_Accounts.AllItems) > 1
             Width: =Parent.Width
-            Y: =183
+            Y: =If(_showFilter=true, 255, 190)
             ZIndex: =2
 
             img_AccountImage As image:
+                Height: =80
                 Image: =Coalesce(ThisItem.'Default Image',default_image_Account)
                 OnSelect: =Select(Parent)
                 RadiusBottomLeft: =50
                 RadiusBottomRight: =50
                 RadiusTopLeft: =50
                 RadiusTopRight: =50
-                X: =5
-                Y: =13
+                Width: =80
+                X: =50
+                Y: =14
                 ZIndex: =1
 
             lbl_AccName As label:
+                Font: =Font.Lato
                 Height: =Self.Size * 1.8
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =22
+                Size: =18
                 Text: =ThisItem.'Account Name'
                 VerticalAlign: =VerticalAlign.Top
                 Width: =Parent.TemplateWidth - img_AccountImage.Width - 104
-                X: =155
-                Y: =14
+                X: =163
+                Y: =13
                 ZIndex: =2
 
             lbl_PrimaryContact As label:
+                Color: =RGBA(116, 116, 116, 1)
+                Font: =Font.Lato
                 Height: =Self.Size * 1.8
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
+                Size: =15
                 Text: =Coalesce(ThisItem.primarycontact,"No contact associated")
                 VerticalAlign: =VerticalAlign.Top
                 Width: =lbl_AccName.Width
-                X: =lbl_AccName.X
-                Y: =78
+                X: =163
+                Y: =40
                 ZIndex: =3
 
             NextArrow1 As icon.ChevronRight:
@@ -151,25 +157,26 @@
             Separator1 As rectangle:
                 Height: =1
                 OnSelect: =Select(Parent)
+                Visible: =false
                 Width: =Parent.TemplateWidth
                 Y: =Parent.TemplateHeight - 1
                 ZIndex: =5
 
             lbl_AccType As label:
-                Color: =RGBA(184, 0, 0, 1)
+                Color: =RGBA(118, 0, 0, 1)
+                Font: =Font.Lato
                 Height: =Self.Size * 1.8
                 OnSelect: =Select(Parent)
-                Size: =16
                 Text: =ThisItem.'Account Type'
                 Width: =160
-                X: =450
-                Y: =78
+                X: =158
+                Y: =66
                 ZIndex: =6
 
             btn_Hover As button:
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =113
+                Height: =144
                 HoverFill: =ColorFade(RGBA(56, 96, 178, 0), -20%)
                 OnSelect: |-
                     =Select(Parent);
@@ -190,8 +197,8 @@
                 Icon: =Icon.NextArrow
                 OnSelect: =Select(Parent)
                 Width: =35
-                X: =583
-                Y: =46
+                X: =558
+                Y: =35
                 ZIndex: =8
 
         txt_SearchInput As text:
@@ -242,7 +249,9 @@
     ctn_ShowFilter As groupContainer.manualLayoutContainer:
         Fill: =RGBA(219, 219, 219, 0.71)
         Height: =1135
-        Visible: =_showFilter
+        Visible: |-
+            =false
+            //_showFilter
         Width: =640
         Y: =1
         ZIndex: =12
@@ -255,6 +264,7 @@
             RadiusBottomRight: =
             Size: =24
             Text: =""
+            Visible: =false
             Width: =640
             Y: =777
             ZIndex: =1
@@ -268,6 +278,7 @@
             PaddingLeft: =15
             Size: =18
             Text: =Upper("Filter By")
+            Visible: =false
             Width: =640
             Y: =786
             ZIndex: =2
@@ -293,6 +304,7 @@
             Layout: =Layout.Vertical
             TemplatePadding: =0
             TemplateSize: =60
+            Visible: =false
             Y: =863
             ZIndex: =3
 
@@ -337,6 +349,7 @@
             Icon: =Icon.CancelBadge
             OnSelect: |-
                 =UpdateContext({_showFilter:!_showFilter})
+            Visible: =false
             Width: =42
             X: =589
             Y: =786
@@ -351,6 +364,7 @@
 
         ctn_BottomNav As groupContainer.manualLayoutContainer:
             Height: =80
+            Visible: =false
             Width: =App.Width
             Y: =1056
             ZIndex: =7
@@ -473,6 +487,7 @@
         Circle1 As circle:
             Fill: =RGBA(168, 0, 0, 1)
             Height: =70
+            Visible: =false
             Width: =70
             X: =285
             Y: =1024
@@ -485,6 +500,7 @@
             RadiusBottomRight: =50
             RadiusTopLeft: =50
             RadiusTopRight: =50
+            Visible: =false
             Width: =113
             X: =296
             Y: =1014
@@ -511,7 +527,7 @@
             HoverColor: =RGBA(116, 116, 116, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             OnSelect: |-
-                =UpdateContext({_showFilter:true})
+                =UpdateContext({_showFilter:!_showFilter})
             PaddingRight: =25
             PressedColor: =RGBA(128, 128, 128, 1)
             PressedFill: =
@@ -617,4 +633,88 @@
         X: =553
         Y: =215
         ZIndex: =16
+
+    btn_Filter_1 As button:
+        BorderColor: =If(_AccountFilter = Blank(),  RGBA(240, 240, 240, 1), RGBA(128, 128, 128, 1))
+        Color: =RGBA(128, 128, 128, 1)
+        DisabledColor: =RGBA(128, 128, 128, 1)
+        DisabledFill: =RGBA(240, 240, 240, 1)
+        Fill: =If(_AccountFilter = Blank(), RGBA(240, 240, 240, 1), Transparent)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Normal
+        Height: =55
+        HoverBorderColor: =RGBA(128, 128, 128, 1)
+        HoverColor: =RGBA(116, 116, 116, 1)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        OnSelect: |-
+            =UpdateContext({_AccountFilter:Blank()})
+        PressedColor: =RGBA(128, 128, 128, 1)
+        PressedFill: =
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Size: =20
+        Text: ="All"
+        Visible: =If(_showFilter = true, true)
+        Width: =77
+        X: =132
+        Y: =269
+        ZIndex: =17
+
+    btn_Filter_2 As button:
+        BorderColor: =If(_AccountFilter = 1,  RGBA(240, 240, 240, 1), RGBA(128, 128, 128, 1))
+        Color: =RGBA(128, 128, 128, 1)
+        DisabledColor: =RGBA(128, 128, 128, 1)
+        DisabledFill: =RGBA(240, 240, 240, 1)
+        Fill: =If(_AccountFilter = 1, RGBA(240, 240, 240, 1), Transparent)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Normal
+        Height: =55
+        HoverBorderColor: =RGBA(128, 128, 128, 1)
+        HoverColor: =RGBA(116, 116, 116, 1)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        OnSelect: |-
+            =UpdateContext({_AccountFilter:1})
+        PressedColor: =RGBA(128, 128, 128, 1)
+        PressedFill: =
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Size: =20
+        Text: ="Distributor"
+        Visible: =If(_showFilter = true, true)
+        Width: =175
+        X: =225
+        Y: =269
+        ZIndex: =18
+
+    btn_Filter_3 As button:
+        BorderColor: =If(_AccountFilter = 2,  RGBA(240, 240, 240, 1), RGBA(128, 128, 128, 1))
+        Color: =RGBA(128, 128, 128, 1)
+        DisabledColor: =RGBA(128, 128, 128, 1)
+        DisabledFill: =RGBA(240, 240, 240, 1)
+        Fill: =If(_AccountFilter = 2, RGBA(240, 240, 240, 1), Transparent)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Normal
+        Height: =55
+        HoverBorderColor: =RGBA(128, 128, 128, 1)
+        HoverColor: =RGBA(116, 116, 116, 1)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        OnSelect: |-
+            =UpdateContext({_AccountFilter:2})
+        PressedColor: =RGBA(128, 128, 128, 1)
+        PressedFill: =
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Size: =20
+        Text: ="End User"
+        Visible: =If(_showFilter = true, true)
+        Width: =175
+        X: =416
+        Y: =269
+        ZIndex: =19
 
