@@ -902,14 +902,7 @@
         },
         "DisabledBorderColor",
         "PressedBorderColor",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "ColorFade(Self.BorderColor, 20%)",
-          "InvariantPropertyName": "HoverBorderColor",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "HoverBorderColor",
         "BorderStyle",
         "FocusedBorderColor",
         "Color",
@@ -1002,7 +995,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button1",
-      "ParentIndex": 8,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2118,7 +2111,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icn_add",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2530,7 +2523,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon2_1",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4422,7 +4415,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgActivity_1",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5665,7 +5658,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblCustomer",
-      "ParentIndex": 6,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6499,14 +6492,7 @@
           "NameMapSourceSchema": "?"
         },
         "Align",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "VerticalAlign",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "VerticalAlign",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -9121,7 +9107,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSubject_1",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9971,7 +9957,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txt_Notes",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
