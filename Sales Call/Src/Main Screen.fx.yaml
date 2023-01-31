@@ -208,7 +208,7 @@
             btn_Hover As button:
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =130
+                Height: =110
                 HoverFill: =ColorFade(RGBA(56, 96, 178, 0.2), -20%)
                 OnSelect: |-
                     =Select(Parent);

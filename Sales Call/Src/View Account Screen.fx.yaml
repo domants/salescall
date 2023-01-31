@@ -217,7 +217,7 @@
         gal_activity As gallery.galleryVertical:
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
-            Height: =487
+            Height: =499
             Items: |-
                 =//-Account Activity
                 //Switch(_selActivity,"Tasks",Sort(Filter(Tasks,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Phone Calls",Sort(Filter('Phone Calls',AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Appointments",Sort(Filter(Appointments,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Emails",Sort(Filter('Email Messages',AsType(Regarding,[@Accounts]).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),Sort(Filter(Activities,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Date Created',Descending))
@@ -238,13 +238,12 @@
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
-            TemplateSize: =94
+            TemplatePadding: =0
+            TemplateSize: =120
             Visible: |-
                 =//If(Value(CountRows(gal_activity_1.AllItems)) > 0, true, false)
                 true
-            Width: =582
-            X: =36
-            Y: =644
+            Y: =637
             ZIndex: =18
 
             HtmlText2_3 As htmlViewer:
@@ -270,8 +269,8 @@
                 OnSelect: =Select(Parent)
                 PressedFill: =RGBA(0, 120, 212, 1)
                 Width: =35
-                X: =38
-                Y: =5
+                X: =80
+                Y: =17
                 ZIndex: =2
 
             lblSubject_1 As label:
@@ -291,8 +290,8 @@
                     =//ThisItem.subject
                     Coalesce(ThisItem.'Subject ',"Subject")
                 Width: =466
-                X: =98
-                Y: =23
+                X: =140
+                Y: =35
                 ZIndex: =3
 
             imgActivity_1 As image:
@@ -318,8 +317,8 @@
                     =//If(IsBlank(ThisItem.subject),false,true)
                     true
                 Width: =15
-                X: =48
-                Y: =15
+                X: =90
+                Y: =27
                 ZIndex: =4
 
             lblCreatedOn_1 As label:
@@ -338,8 +337,8 @@
                 Size: =9
                 Text: =Coalesce(Text(DateValue(ThisItem.'Created On'),"mm/mm/yyyy"),"12/22/2022")
                 Width: =86
-                X: =98
-                Y: =5
+                X: =140
+                Y: =17
                 ZIndex: =5
 
             lblGetActivityLabel_1 As label:
@@ -397,8 +396,8 @@
                     Coalesce(PlainText(ThisItem.Notes),"")
                 VerticalAlign: =VerticalAlign.Top
                 Width: =466
-                X: =98
-                Y: =48
+                X: =140
+                Y: =60
                 ZIndex: =7
 
             lblCustomer As label:
@@ -415,8 +414,8 @@
                     
                     //Coalesce(Text(DateValue(ThisItem.'Created By'.'Full Name'),"mmmm dd, yyyy"),"Notes")
                 Width: =394
-                X: =192
-                Y: =5
+                X: =234
+                Y: =17
                 ZIndex: =8
 
             Icon1_1 As icon.NextArrow:
@@ -430,15 +429,15 @@
                     Refresh('Sales Calls');
                 Visible: =false
                 Width: =35
-                X: =529
-                Y: =29
+                X: =548
+                Y: =30
                 ZIndex: =9
 
             btn_overlay As button:
                 Fill: |-
                     =//If(ThisItem.IsSelected,RGBA(255, 0, 0, 0.2),RGBA(0, 0, 0, 0))
                     RGBA(0, 0, 0, 0)
-                Height: =108
+                Height: =120
                 HoverFill: =ColorFade(RGBA(56, 96, 178, 0.2), -20%)
                 OnSelect: |-
                     =Select( Parent );Navigate('Add Sales Caller Screen',Fade,{Customer:Account.'Account Name',AccContext:ThisItem});
@@ -447,9 +446,13 @@
                 PressedFill: |-
                     =//Self.Color
                     Transparent
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
                 Size: =24
                 Text: =""
-                Width: =572
+                Width: =640
                 ZIndex: =10
 
         noRecordFoundTimeline As label:
