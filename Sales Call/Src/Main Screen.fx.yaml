@@ -671,7 +671,7 @@
                 )
             )
         OnSelect: |-
-            =UpdateContext({_showFilter:true});
+            =//UpdateContext({_showFilter:true});
             
             If(!IsBlank(txt_SearchInput.Text),Reset(txt_SearchInput))
         Width: =32
