@@ -215,7 +215,7 @@
         gal_activity As gallery.galleryVertical:
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
-            Height: =465
+            Height: =468
             Items: |-
                 =//-Account Activity
                 //Switch(_selActivity,"Tasks",Sort(Filter(Tasks,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Phone Calls",Sort(Filter('Phone Calls',AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Appointments",Sort(Filter(Appointments,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Emails",Sort(Filter('Email Messages',AsType(Regarding,[@Accounts]).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),Sort(Filter(Activities,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Date Created',Descending))
@@ -283,7 +283,7 @@
                 Height: =50
                 OnSelect: =Select(Parent)
                 PaddingLeft: =0
-                Size: =15
+                Size: =18
                 Text: |
                     =//ThisItem.subject
                     Coalesce(ThisItem.'Subject ',"Subject")
@@ -395,7 +395,7 @@
                 VerticalAlign: =VerticalAlign.Top
                 Width: =420
                 X: =140
-                Y: =62
+                Y: =69
                 ZIndex: =7
 
             lblCustomer As label:
