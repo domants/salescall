@@ -6,7 +6,7 @@
         DisabledColor: =RGBA(176, 26, 26, 1)
         DisabledFill: =RGBA(255, 255, 255, 1)
         DisplayMode: =DisplayMode.Disabled
-        Height: =632
+        Height: =598
         RadiusBottomLeft: |
             =0
         RadiusBottomRight: =0
@@ -15,7 +15,7 @@
         Size: =24
         Text: =""
         Width: =640
-        Y: =503
+        Y: =537
         ZIndex: =1
 
     background_3 As button:
@@ -23,7 +23,7 @@
         DisabledColor: =RGBA(176, 26, 26, 1)
         DisabledFill: =RGBA(255, 255, 255, 1)
         DisplayMode: =DisplayMode.Disabled
-        Height: =395
+        Height: =431
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
         RadiusTopLeft: =50
@@ -56,13 +56,13 @@
             AutoHeight: =true
             Font: =Font.'Lato Black'
             Height: =32
-            Size: =20
+            Size: =25
             Text: |-
                 =//Coalesce(galAccountsValues.Selected.lblAccountName.Text,"Intown ASC")
                 //"Account Selected"
                 Account.'Account Name'
             Width: =Parent.Width
-            Y: =158
+            Y: =152
             ZIndex: =4
 
         lblSelectedAccountSince As label:
@@ -72,64 +72,63 @@
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
             Height: =32
-            Size: =11
             Text: |-
                 =Coalesce($"Customer Since: {Text(Account.'Created On',"dd/mm/yyyy")}","Customer Since: 18/12/2022")
                 //"Customer Since"
             Width: =Parent.Width
-            Y: =193
+            Y: =194
             ZIndex: =5
 
         lblSelectedAccountWebsite As label:
             AutoHeight: =true
             Font: =Font.Lato
             Height: =19
-            Size: =12
+            Size: =15
             Text: |-
                 =//"Website"
                 Coalesce(Account.City,"Melbourne")
             Width: =399
-            X: =118
-            Y: =246
+            X: =138
+            Y: =252
             ZIndex: =7
 
         lblSelectedAccountPhone As label:
             AutoHeight: =true
             Font: =Font.Lato
             Height: =39
-            Size: =12
+            Size: =15
             Text: |-
                 =//"Phone"
                 Coalesce(Account.'Main Phone',"555-555-6276")
             Width: =399
-            X: =118
-            Y: =318
+            X: =138
+            Y: =324
             ZIndex: =8
 
         lblSelectedAccountContact As label:
             AutoHeight: =true
             Font: =Font.Lato
             Height: =22
-            Size: =12
+            Size: =15
             Text: |-
                 =//"PrimaryContact"
                 //Coalesce(galAccountsValues.Selected.lblPrimaryContact.Text,"Benjamin Smith")
                 
                 Coalesce(Account.'Primary Contact'.'Full Name',"PrimaryContact")
             Width: =399
-            X: =118
-            Y: =282
+            X: =138
+            Y: =288
             ZIndex: =9
 
         lblSelectedAccountEmail As label:
             AutoHeight: =true
             Font: =Font.Lato
             Height: =24
-            Size: =12
+            Size: =15
             Text: =Account.'Account Type'
             Width: =399
-            X: =118
-            Y: =354
+            X: =138
+            Y: =360
             ZIndex: =10
 
         iconSelectedPhone As image:
@@ -142,8 +141,8 @@
                 </svg>
                 ")
             Width: =20
-            X: =90
-            Y: =286
+            X: =96
+            Y: =297
             ZIndex: =12
 
         iconSelectedWebsite As image:
@@ -155,8 +154,8 @@
                 </svg>
                 ")
             Width: =20
-            X: =90
-            Y: =250
+            X: =96
+            Y: =260
             ZIndex: =13
 
         iconSelectedEmail As image:
@@ -169,8 +168,8 @@
                 </svg>
                 ")
             Width: =20
-            X: =90
-            Y: =358
+            X: =96
+            Y: =367
             ZIndex: =14
 
         iconSelectedContact As image:
@@ -182,8 +181,8 @@
                 </svg>
                 ")
             Width: =20
-            X: =90
-            Y: =322
+            X: =96
+            Y: =333
             ZIndex: =15
 
         Label1 As label:
@@ -192,11 +191,11 @@
             FontWeight: =FontWeight.Bold
             Height: =35
             PaddingLeft: =50
-            Size: =22
+            Size: =25
             Text: ="Sales Call Activity"
             Width: =596
             X: =36
-            Y: =546
+            Y: =564
             ZIndex: =16
 
         txtTotalActivity_1 As label:
@@ -206,18 +205,17 @@
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
             Height: =55
-            Size: =11
             Text: |-
                 ="Activities: ("&CountRows(gal_activity.AllItems)&")"
             Width: =130
             X: =82
-            Y: =584
+            Y: =602
             ZIndex: =17
 
         gal_activity As gallery.galleryVertical:
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
-            Height: =499
+            Height: =465
             Items: |-
                 =//-Account Activity
                 //Switch(_selActivity,"Tasks",Sort(Filter(Tasks,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Phone Calls",Sort(Filter('Phone Calls',AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Appointments",Sort(Filter(Appointments,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),"Emails",Sort(Filter('Email Messages',AsType(Regarding,[@Accounts]).'Account Name'=galAccountsValues.Selected.name),'Created On',Descending),Sort(Filter(Activities,AsType(Regarding,Accounts).'Account Name'=galAccountsValues.Selected.name),'Date Created',Descending))
@@ -243,7 +241,7 @@
             Visible: |-
                 =//If(Value(CountRows(gal_activity_1.AllItems)) > 0, true, false)
                 true
-            Y: =637
+            Y: =668
             ZIndex: =18
 
             HtmlText2_3 As htmlViewer:
@@ -285,13 +283,14 @@
                 Height: =50
                 OnSelect: =Select(Parent)
                 PaddingLeft: =0
-                Size: =14
+                Size: =15
                 Text: |
                     =//ThisItem.subject
                     Coalesce(ThisItem.'Subject ',"Subject")
+                VerticalAlign: =VerticalAlign.Top
                 Width: =466
                 X: =140
-                Y: =35
+                Y: =34
                 ZIndex: =3
 
             imgActivity_1 As image:
@@ -334,9 +333,9 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =18
                 OnSelect: =Select(Parent)
-                Size: =9
+                Size: =12
                 Text: =Coalesce(Text(DateValue(ThisItem.'Created On'),"mm/mm/yyyy"),"12/22/2022")
-                Width: =86
+                Width: =100
                 X: =140
                 Y: =17
                 ZIndex: =5
@@ -389,15 +388,14 @@
                 Italic: =true
                 OnSelect: =Select(Parent)
                 PaddingLeft: =0
-                Size: =11
                 Text: |-
                     =//AsType(ThisItem.Regarding,Contacts).'Full Name'
                     //PlainText(ThisItem.Notes)
                     Coalesce(PlainText(ThisItem.Notes),"No Notes.")
                 VerticalAlign: =VerticalAlign.Top
-                Width: =466
+                Width: =420
                 X: =140
-                Y: =60
+                Y: =62
                 ZIndex: =7
 
             lblCustomer As label:
@@ -406,7 +404,6 @@
                 Height: =18
                 OnSelect: =Select(Parent)
                 PaddingLeft: =0
-                Size: =12
                 Text: |-
                     =//Text(DateValue(ThisItem.'Created On'),"mmmm dd, yyyy")
                     //Coalesce(AsType(ThisItem.'Customer ',Accounts).'Account Name',"Customer")
@@ -414,7 +411,7 @@
                     
                     //Coalesce(Text(DateValue(ThisItem.'Created By'.'Full Name'),"mmmm dd, yyyy"),"Notes")
                 Width: =394
-                X: =234
+                X: =245
                 Y: =17
                 ZIndex: =8
 
@@ -483,21 +480,21 @@
                 </svg>
                 ")
             Width: =20
-            X: =90
-            Y: =406
+            X: =96
+            Y: =428
             ZIndex: =22
 
         lblSelectedAccountEmail_1 As label:
             AutoHeight: =true
             Font: =Font.Lato
             Height: =32
-            Size: =12
+            Size: =15
             Text: |-
                 =//Account.'Account Type'
                 "Unscheduled meeting with Victorian Frozen Foods Distributors Pty Ltd regarding the price hike"
             Width: =399
-            X: =118
-            Y: =390
+            X: =138
+            Y: =396
             ZIndex: =23
 
         lbl_notes As label:
@@ -573,8 +570,8 @@
         RadiusTopRight: =150
         Text: =""
         Width: =75
-        X: =506
-        Y: =537
+        X: =536
+        Y: =572
         ZIndex: =8
 
     icn_add As icon.Add:
@@ -590,8 +587,8 @@
             Set(varSetEdit, "add");
         PressedColor: =White
         Width: =52
-        X: =518
-        Y: =543
+        X: =548
+        Y: =578
         ZIndex: =9
 
     txt_Notes As text:

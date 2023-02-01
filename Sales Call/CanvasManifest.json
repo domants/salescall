@@ -97,11 +97,11 @@
     "FileID": "3ccf729c-921a-46f5-a73d-0000029ee5d5",
     "Id": "09c6351f-9683-4262-876e-bfda604817c5",
     "InstrumentationKey": "",
-    "Name": "Sales Calls",
+    "Name": "Sales Calls - copy",
     "OriginatingVersion": "1.326"
   },
   "PublishInfo": {
-    "AppName": "Sales Calls",
+    "AppName": "Sales Calls - copy",
     "BackgroundColor": "rgba(255, 255, 255, 1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "",

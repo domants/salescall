@@ -52,7 +52,8 @@
     "TrimmedViewName": true,
     "Type": "ViewInfo",
     "ViewInfoNameMapping": {
-      "5b63f49e-7be1-48f8-8927-6fff7eb4d564": "Active Sales Calls",
+      "3632aab4-b8a1-ed11-aad1-002248933441": "Sales Calls for an Account",
+      "5b63f49e-7be1-48f8-8927-6fff7eb4d564": "Sales Calls This Week",
       "9a144b24-d824-4d0c-bfbb-e3ce1f62a2e0": "Sales Calls Lookup View",
       "cfc7ab19-2639-437b-8fac-1393b001f916": "Sales Calls Advanced Find View",
       "de46804e-36d3-4737-9481-f664aa3139b9": "Inactive Sales Calls",
